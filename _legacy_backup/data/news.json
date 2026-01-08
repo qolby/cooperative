@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "date": "2026-01-05",
+    "title": "Rapat Anggota Tahunan 2025",
+    "summary": "Pelaksanaan RAT tahun buku 2025 berjalan lancar di Hotel Tarakan Plaza. Dihadiri oleh 500 anggota perwakilan.",
+    "image": "placeholder-1.jpg"
+  },
+  {
+    "id": 2,
+    "date": "2025-12-20",
+    "title": "Penyuluhan Kewirausahaan untuk Anggota",
+    "summary": "Pelatihan manajemen keuangan untuk UMKM anggota koperasi, menghadirkan pembicara dari dinas terkait.",
+    "image": "placeholder-2.jpg"
+  },
+  {
+    "id": 3,
+    "date": "2025-12-10",
+    "title": "Bantuan Sosial Akhir Tahun",
+    "summary": "KSP CU Sinar Sejahtera membagikan paket sembako untuk anggota lansia dan panti asuhan sekitar.",
+    "image": "placeholder-3.jpg"
+  },
+  {
+    "id": 4,
+    "date": "2025-11-15",
+    "title": "Kunjungan Studi Banding Koperasi Maju",
+    "summary": "Menerima kunjungan dari Koperasi Maju Jaya Surabaya untuk bertukar wawasan mengenai digitalisasi koperasi.",
+    "image": "placeholder-4.jpg"
+  },
+  {
+    "id": 5,
+    "date": "2025-10-28",
+    "title": "Upacara Hari Sumpah Pemuda",
+    "summary": "Staff dan Pengurus melaksanakan upacara bendera memperingati Hari Sumpah Pemuda.",
+    "image": "placeholder-5.jpg"
+  }
+]

@@ -1,0 +1,151 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Hubungi Kami">
+    <div
+        class="page-header"
+        style="background: var(--text-dark); color: white; padding: 6rem 0 4rem; text-align: center;"
+    >
+        <div class="container">
+            <h1>Hubungi Kami</h1>
+            <p>
+                Kami siap membantu Anda. Silakan hubungi kami melalui saluran di
+                bawah ini.
+            </p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid-2">
+                <!-- Contact Info & Map -->
+                <div>
+                    <h3>Kantor Pusat</h3>
+                    <p class="mb-2">
+                        Jl. Yos Sudarso No. 88, Tarakan, Kalimantan Utara
+                    </p>
+
+                    <ul style="margin-bottom: 2rem;">
+                        <li style="margin-bottom: 10px;">
+                            📞 Telepon: (0551) 123-4567
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            📱 WhatsApp: +62 812-3456-7890
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            ✉️ Email: info@sinarsejahtera.kop.id
+                        </li>
+                    </ul>
+
+                    <!-- Fake Map -->
+                    <div
+                        style="background: #eee; height: 300px; width: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #777;"
+                    >
+                        (Google Maps Embed Placeholder)
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="card">
+                    <h3>Kirim Pesan</h3>
+                    <div id="successMessage" class="success-msg">
+                        Pesan Anda berhasil terkirim! Kami akan segera
+                        menghubungi Anda.
+                    </div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" required />
+                            <span class="error-msg">Nama wajib diisi.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required />
+                            <span class="error-msg"
+                                >Masukkan email yang valid.</span
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" required />
+                            <span class="error-msg">Subjek wajib diisi.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" rows="5" required></textarea>
+                            <span class="error-msg"
+                                >Pesan tidak boleh kosong.</span
+                            >
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                            style="width: 100%;">Kirim Pesan</button
+                        >
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        if (form) {
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                let isValid = true;
+                const formGroups = document.querySelectorAll(".form-group");
+                formGroups.forEach((g) => g.classList.remove("error"));
+
+                const name = document.getElementById(
+                    "name",
+                ) as HTMLInputElement;
+                const email = document.getElementById(
+                    "email",
+                ) as HTMLInputElement;
+                const subject = document.getElementById(
+                    "subject",
+                ) as HTMLInputElement;
+                const message = document.getElementById(
+                    "message",
+                ) as HTMLTextAreaElement;
+
+                if (!name.value.trim()) {
+                    name.parentElement?.classList.add("error");
+                    isValid = false;
+                }
+                if (!email.value.trim() || !email.value.includes("@")) {
+                    email.parentElement?.classList.add("error");
+                    isValid = false;
+                }
+                if (!subject.value.trim()) {
+                    subject.parentElement?.classList.add("error");
+                    isValid = false;
+                }
+                if (!message.value.trim()) {
+                    message.parentElement?.classList.add("error");
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    const btn = form.querySelector("button");
+                    if (btn) {
+                        const originalText = btn.innerText;
+                        btn.innerText = "Mengirim...";
+                        btn.disabled = true;
+
+                        setTimeout(() => {
+                            const successMsg =
+                                document.getElementById("successMessage");
+                            if (successMsg) successMsg.style.display = "block";
+                            (form as HTMLFormElement).reset();
+                            btn.innerText = originalText;
+                            btn.disabled = false;
+                        }, 1500);
+                    }
+                }
+            });
+        }
+    </script>
+</Layout>

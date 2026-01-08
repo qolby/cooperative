@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+    const newsEntries = await getCollection("news");
+    return newsEntries.map((entry) => ({
+        params: { slug: entry.slug },
+        props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+    <article class="section">
+        <div class="container" style="max-width: 800px;">
+            <a href="/news" class="btn btn-outline-primary mb-2"
+                >← Kembali ke Berita</a
+            >
+
+            <div class="card" style="padding: 3rem;">
+                <span class="date" style="color: #777;"
+                    >{
+                        new Date(entry.data.date).toLocaleDateString("id-ID", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                        })
+                    }</span
+                >
+                <h1 style="margin: 1rem 0; font-size: 2.5rem;">
+                    {entry.data.title}
+                </h1>
+                <div
+                    class="news-img-placeholder"
+                    style="margin: 2rem 0; border-radius: 8px;"
+                >
+                    Foto Utama
+                </div>
+
+                <div class="content" style="line-height: 1.8;">
+                    <Content />
+                </div>
+            </div>
+        </div>
+    </article>
+</Layout>

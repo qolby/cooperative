@@ -1,0 +1,74 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<header class="header">
+    <div class="container navbar">
+        <a href="/" class="logo">
+            <div class="logo-icon"></div>
+            <div class="logo-text">
+                <span class="brand">KSP CU Sinar Sejahtera</span>
+                <span class="sub-brand">Sinarsejahtera.kop.id</span>
+            </div>
+        </a>
+    
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="/" class={pathname === "/" ? "active" : ""}>Beranda</a></li>
+                <li class="dropdown">
+                    <a href="/about" class={pathname.startsWith("/about") ? "active" : ""}>Tentang Kami ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="/about#history">Sejarah</a></li>
+                        <li><a href="/about#vision">Visi Misi</a></li>
+                        <li><a href="/about#structure">Struktur Pengurus</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="/services" class={pathname.startsWith("/services") ? "active" : ""}>Layanan ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="/services#simpanan">Simpanan</a></li>
+                        <li><a href="/services#pinjaman">Pinjaman</a></li>
+                        <li><a href="/services#shu">Manfaat & SHU</a></li>
+                    </ul>
+                </li>
+                <li><a href="/membership" class={pathname.startsWith("/membership") ? "active" : ""}>Keanggotaan</a></li>
+                <li class="dropdown">
+                    <a href="/transparency" class={pathname.startsWith("/transparency") ? "active" : ""}>Transparansi ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="/transparency#reports">Laporan Keuangan</a></li>
+                    </ul>
+                </li>
+                <li><a href="/news" class={pathname.startsWith("/news") ? "active" : ""}>Berita</a></li>
+            </ul>
+            <a href="/contact" class="btn btn-primary nav-cta">Hubungi Kami</a>
+        </nav>
+    
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="/">Beranda</a>
+        <a href="/about">Tentang Kami</a>
+        <a href="/services">Layanan</a>
+        <a href="/membership">Keanggotaan</a>
+        <a href="/transparency">Transparansi</a>
+        <a href="/news">Berita</a>
+        <a href="/contact">Hubungi Kami</a>
+    </div>
+</header>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburger?.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu?.classList.toggle('active');
+    });
+</script>

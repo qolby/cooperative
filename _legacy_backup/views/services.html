@@ -1,0 +1,145 @@
+<div class="page-header"
+    style="background: var(--primary-blue); color: white; padding: 6rem 0 4rem; text-align: center;">
+    <div class="container">
+        <h1>Layanan Kami</h1>
+        <p>Produk Simpanan dan Pinjaman untuk Kebutuhan Anda</p>
+    </div>
+</div>
+
+<!-- Simpanan -->
+<section id="simpanan" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Produk Simpanan</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="grid-3">
+            <div class="card service-card">
+                <h3>Simpanan Saham</h3>
+                <p>Simpanan Pokok & Wajib sebagai bukti kepemilikan anggota. Mendapatkan SHU setiap tahun.</p>
+            </div>
+            <div class="card service-card">
+                <h3>Simpanan Sukarela</h3>
+                <p>Simpanan yang bisa disetor dan ditarik kapan saja dengan bunga harian.</p>
+            </div>
+            <div class="card service-card">
+                <h3>Simpanan Pendidikan</h3>
+                <p>Persiapkan biaya pendidikan anak sejak dini dengan bunga khusus dan jangka waktu tertentu.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pinjaman & Calculator -->
+<section id="pinjaman" class="section bg-light">
+    <div class="container">
+        <div class="grid-2" style="align-items: start;">
+            <div>
+                <div class="section-header" style="text-align: left;">
+                    <h2>Produk Pinjaman</h2>
+                    <div class="divider" style="margin: 0; margin-bottom: 1rem;"></div>
+                </div>
+                <p class="mb-2">Kami menyediakan berbagai jenis pinjaman dengan proses cepat dan syarat mudah untuk
+                    kesejahteraan anggota.</p>
+                <ul class="benefits-list">
+                    <li class="benefit-item"><span class="check">✔</span> Pinjaman Modal Usaha</li>
+                    <li class="benefit-item"><span class="check">✔</span> Pinjaman Renovasi Rumah</li>
+                    <li class="benefit-item"><span class="check">✔</span> Pinjaman Kendaran Bermotor</li>
+                    <li class="benefit-item"><span class="check">✔</span> Pinjaman Darurat / Kesehatan</li>
+                </ul>
+            </div>
+
+            <!-- Calculator Widget -->
+            <div class="card calculator-card">
+                <div class="calc-tabs" style="display: flex; gap: 10px; margin-bottom: 1.5rem;">
+                    <button id="tabLoan" class="btn btn-primary" style="flex: 1; padding: 10px;">Pinjaman</button>
+                    <button id="tabSavings" class="btn"
+                        style="flex: 1; padding: 10px; background: #eee;">Simpanan</button>
+                </div>
+
+                <!-- Loan View -->
+                <div id="viewLoan">
+                    <h3>🔢 Simulasi Pinjaman</h3>
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                        <label for="loanAmount">Jumlah Pinjaman (Rp)</label>
+                        <input type="number" id="loanAmount" placeholder="Contoh: 10000000"
+                            style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                        <label for="loanDuration">Jangka Waktu (Bulan)</label>
+                        <select id="loanDuration"
+                            style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                            <option value="6">6 Bulan</option>
+                            <option value="12">12 Bulan</option>
+                            <option value="24">24 Bulan</option>
+                            <option value="36">36 Bulan</option>
+                        </select>
+                    </div>
+                    <button id="calculateBtn" class="btn btn-primary" style="width: 100%;">Hitung Angsuran</button>
+
+                    <div id="resultSection" class="hidden"
+                        style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed #ddd;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <span>Pokok:</span>
+                            <strong id="resultPrincipal">Rp 0</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <span>Bunga (1%):</span>
+                            <strong id="resultInterest">Rp 0</strong>
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 1.1rem; color: var(--primary-green);">
+                            <strong>Total / Bulan:</strong>
+                            <strong id="resultTotal">Rp 0</strong>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #777; margin-top: 10px; text-align: center;">*Simulasi
+                            estimasi, bunga flat 12% p.a.</p>
+                    </div>
+                </div>
+
+                <!-- Savings View -->
+                <div id="viewSavings" class="hidden">
+                    <h3>💰 Simulasi Simpanan</h3>
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                        <label for="savingsAmount">Jumlah Simpanan (Rp)</label>
+                        <input type="number" id="savingsAmount" placeholder="Contoh: 5000000"
+                            style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                        <label for="savingsDuration">Lama Simpan (Bulan)</label>
+                        <select id="savingsDuration"
+                            style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                            <option value="6">6 Bulan</option>
+                            <option value="12">12 Bulan</option>
+                            <option value="24">24 Bulan</option>
+                        </select>
+                    </div>
+                    <button id="calculateSavingsBtn" class="btn btn-yellow" style="width: 100%;">Hitung
+                        Keuntungan</button>
+
+                    <div id="resultSavingsSection" class="hidden"
+                        style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed #ddd;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <span>Bunga (4% p.a):</span>
+                            <strong id="resultSavingsInterest">Rp 0</strong>
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 1.1rem; color: var(--accent-orange);">
+                            <strong>Total Saldo Akhir:</strong>
+                            <strong id="resultSavingsTotal">Rp 0</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SHU -->
+<section id="shu" class="section">
+    <div class="container text-center">
+        <h2>Sisa Hasil Usaha (SHU)</h2>
+        <p>SHU dibagikan setiap tahun berdasarkan partisipasi jasa usaha (pinjaman) dan jasa modal (simpanan) anggota.
+        </p>
+    </div>
+</section>

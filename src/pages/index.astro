@@ -1,0 +1,177 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Beranda">
+	<!-- Hero Section -->
+	<section id="home" class="hero">
+		<div class="hero-overlay"></div>
+		<div class="container hero-content">
+			<h1>
+				Bersinergi untuk <span class="highlight"
+					>Kesejahteraan Bersama</span>
+			</h1>
+			<p class="hero-sub">
+				Layanan Simpan Pinjam Terpercaya | 777+ Anggota | Aset > Rp10
+				Miliar
+			</p>
+			<div class="hero-buttons">
+				<a href="/services" class="btn btn-green">
+					<span class="icon">💸</span> Ajukan Pinjaman
+				</a>
+				<a href="/membership" class="btn btn-yellow">
+					<span class="icon">👤</span> Daftar Jadi Anggota
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- About Brief -->
+	<section class="section about-preview">
+		<div class="container">
+			<div class="section-header">
+				<h2>Sekilas Tentang Kami</h2>
+				<div class="divider"></div>
+			</div>
+			<div class="grid-3">
+				<div class="card about-card">
+					<h3>Sejarah Singkat</h3>
+					<p>
+						Berdiri sejak 2014 dan disahkan pada 2015, KSP CU Sinar
+						Sejahtera hadir untuk membangun ekonomi anggota melalui
+						gotong royong.
+					</p>
+				</div>
+				<div class="card about-card">
+					<h3>Statistik Koperasi</h3>
+					<ul class="stats-list">
+						<li><strong>777+</strong> Anggota Aktif</li>
+						<li><strong>Rp 10M+</strong> Total Aset</li>
+						<li><strong>2</strong> Kantor Cabang</li>
+					</ul>
+				</div>
+				<div class="card about-card">
+					<h3>Visi & Misi</h3>
+					<p>
+						Menjadi koperasi terpercaya yang mensejahterakan anggota
+						melalui pengelolaan keuangan yang tranparan dan
+						profesional.
+					</p>
+				</div>
+			</div>
+			<div class="text-center" style="margin-top: 2rem;">
+				<a href="/about" class="btn btn-outline-primary"
+					>Lihat Profil Lengkap</a
+				>
+			</div>
+		</div>
+	</section>
+
+	<!-- Services Preview -->
+	<section class="section bg-light">
+		<div class="container">
+			<div class="section-header">
+				<h2>Layanan Utama</h2>
+				<p>Solusi keuangan untuk masa depan yang lebih baik</p>
+			</div>
+			<div class="grid-3">
+				<div class="card service-card">
+					<div class="service-icon">💰</div>
+					<h3>Simpanan</h3>
+					<p>
+						Berbagai jenis simpanan dengan bunga kompetitif dan aman
+						untuk masa depan Anda.
+					</p>
+					<a href="/services" class="link-arrow"
+						>Pelajari Lebih Lanjut →</a
+					>
+				</div>
+				<div class="card service-card">
+					<div class="service-icon">🤝</div>
+					<h3>Pinjaman</h3>
+					<p>
+						Proses mudah dan cepat untuk kebutuhan usaha,
+						pendidikan, atau keperluan mendesak.
+					</p>
+					<a href="/services" class="link-arrow">Lihat Simulasi →</a>
+				</div>
+				<div class="card service-card">
+					<div class="service-icon">📈</div>
+					<h3>SHU & Manfaat</h3>
+					<p>
+						Nikmati sisa hasil usaha tahunan dan berbagai manfaat
+						kesejahteraan lainnya.
+					</p>
+					<a href="/services" class="link-arrow">Cek Manfaat →</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials -->
+	<section class="section">
+		<div class="container">
+			<div class="section-header">
+				<h2>Mengapa Bergabung?</h2>
+			</div>
+			<div class="grid-2 benefits-grid">
+				<div class="testimonial">
+					<blockquote>
+						"Sejak bergabung, usaha warung saya berkembang pesat
+						berkat pinjaman modal yang mudah. Koperasi ini
+						benar-benar mitra yang baik."
+					</blockquote>
+					<cite>— Bpk. Sutrisno, Anggota sejak 2016</cite>
+				</div>
+				<div class="benefits-list">
+					<div class="benefit-item">
+						<span class="check">✔</span>
+						<div>
+							<h4>Bunga Kompetitif</h4>
+							<p>
+								Bunga simpanan di atas rata-rata bank dan bunga
+								pinjaman ringan.
+							</p>
+						</div>
+					</div>
+					<div class="benefit-item">
+						<span class="check">✔</span>
+						<div>
+							<h4>Transparan</h4>
+							<p>
+								Pengelolaan dana yang terbuka dan laporan rutin
+								kepada anggota.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- News Preview (Static for now) -->
+	<section class="section bg-light">
+		<div class="container">
+			<div class="section-header">
+				<h2>Berita Terbaru</h2>
+				<a href="/news" class="link-arrow" style="font-size: 0.9rem;"
+					>Lihat Semua Berita</a
+				>
+			</div>
+			<div class="grid-3">
+				<article class="card news-card">
+					<div class="news-img-placeholder">Foto Kegiatan</div>
+					<div class="news-content">
+						<span class="date">05 Jan 2026</span>
+						<h3>Rapat Anggota Tahunan 2025</h3>
+						<p>
+							Pelaksanaan RAT tahun buku 2025 berjalan lancar...
+						</p>
+						<a href="/news" class="read-more">Baca Selengkapnya</a>
+					</div>
+				</article>
+				<!-- Mock items -->
+			</div>
+		</div>
+	</section>
+</Layout>

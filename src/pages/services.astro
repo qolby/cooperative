@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Calculator from "../components/Calculator.jsx";
+---
+
+<Layout title="Layanan Kami">
+    <div
+        class="page-header"
+        style="background: var(--primary-blue); color: white; padding: 6rem 0 4rem; text-align: center;"
+    >
+        <div class="container">
+            <h1>Layanan Kami</h1>
+            <p>Produk Simpanan dan Pinjaman untuk Kebutuhan Anda</p>
+        </div>
+    </div>
+
+    <!-- Simpanan -->
+    <section id="simpanan" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Produk Simpanan</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid-3">
+                <div class="card service-card">
+                    <h3>Simpanan Saham</h3>
+                    <p>
+                        Simpanan Pokok & Wajib sebagai bukti kepemilikan
+                        anggota. Mendapatkan SHU setiap tahun.
+                    </p>
+                </div>
+                <div class="card service-card">
+                    <h3>Simpanan Sukarela</h3>
+                    <p>
+                        Simpanan yang bisa disetor dan ditarik kapan saja dengan
+                        bunga harian.
+                    </p>
+                </div>
+                <div class="card service-card">
+                    <h3>Simpanan Pendidikan</h3>
+                    <p>
+                        Persiapkan biaya pendidikan anak sejak dini dengan bunga
+                        khusus dan jangka waktu tertentu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pinjaman & Calculator -->
+    <section id="pinjaman" class="section bg-light">
+        <div class="container">
+            <div class="grid-2" style="align-items: start;">
+                <div>
+                    <div class="section-header" style="text-align: left;">
+                        <h2>Produk Pinjaman</h2>
+                        <div
+                            class="divider"
+                            style="margin: 0; margin-bottom: 1rem;"
+                        >
+                        </div>
+                    </div>
+                    <p class="mb-2">
+                        Kami menyediakan berbagai jenis pinjaman dengan proses
+                        cepat dan syarat mudah untuk kesejahteraan anggota.
+                    </p>
+                    <ul class="benefits-list">
+                        <li class="benefit-item">
+                            <span class="check">✔</span> Pinjaman Modal Usaha
+                        </li>
+                        <li class="benefit-item">
+                            <span class="check">✔</span> Pinjaman Renovasi Rumah
+                        </li>
+                        <li class="benefit-item">
+                            <span class="check">✔</span> Pinjaman Kendaran Bermotor
+                        </li>
+                        <li class="benefit-item">
+                            <span class="check">✔</span> Pinjaman Darurat / Kesehatan
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Calculator Widget -->
+                <Calculator client:load />
+            </div>
+        </div>
+    </section>
+
+    <!-- SHU -->
+    <section id="shu" class="section">
+        <div class="container text-center">
+            <h2>Sisa Hasil Usaha (SHU)</h2>
+            <p>
+                SHU dibagikan setiap tahun berdasarkan partisipasi jasa usaha
+                (pinjaman) dan jasa modal (simpanan) anggota.
+            </p>
+        </div>
+    </section>
+</Layout>
