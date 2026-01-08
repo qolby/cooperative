@@ -618,8 +618,9 @@ img {
 }
 
 .socials a {
-    background: rgba(255, 255, 255, 0.05);
+    /* background: rgba(255, 255, 255, 0.05); */
     transition: 0.3s;
+    margin-right: 1rem;
 }
 
 .footer-bottom {
