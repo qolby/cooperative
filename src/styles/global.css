@@ -431,7 +431,7 @@ img {
 
 .grid-2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
 }
 
@@ -603,7 +603,15 @@ img {
 .footer {
     background-color: #1e272e;
     color: #ecf0f1;
+    background-color: #1e272e;
+    color: #ecf0f1;
     padding: 5rem 0 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3rem;
 }
 
 .footer-col h3 {
