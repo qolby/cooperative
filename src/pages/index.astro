@@ -4,141 +4,268 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Beranda">
 	<!-- Hero Section -->
-	<section id="home" class="hero">
-		<div class="hero-overlay"></div>
-		<div class="container hero-content">
-			<h1>
-				Bersinergi untuk <span class="highlight"
-					>Kesejahteraan Bersama</span
+	<section
+		class="relative min-h-[85vh] bg-[url('https://placehold.co/1920x800/2ecc71/ffffff?text=Header+Image')] bg-cover bg-center flex items-center"
+	>
+		<div class="hero-gradient-overlay absolute inset-0"></div>
+		<div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10 fade-in-up">
+			<div class="max-w-3xl">
+				<h1
+					class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-tight mb-6"
 				>
-			</h1>
-			<p class="hero-sub">
-				Layanan Simpan Pinjam Terpercaya | [Number]+ Anggota | Aset >
-				[Amount]
-			</p>
-			<div class="hero-buttons">
-				<a href="/services" class="btn btn-green">
-					<span class="icon">💸</span> Ajukan Pinjaman
-				</a>
-				<a href="/membership" class="btn btn-yellow">
-					<span class="icon">👤</span> Daftar Jadi Anggota
-				</a>
+					Bersinergi untuk <span
+						class="text-[var(--color-accent-yellow)]"
+						>Kesejahteraan Bersama</span
+					>
+				</h1>
+				<p
+					class="text-lg md:text-xl text-white/95 font-light mb-8 md:mb-10"
+				>
+					Layanan Simpan Pinjam Terpercaya | [Number]+ Anggota | Aset
+					> [Amount]
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a
+						href="/services"
+						class="btn-gradient-green inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-white font-semibold hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
+					>
+						<span>💸</span> Ajukan Pinjaman
+					</a>
+					<a
+						href="/membership"
+						class="btn-gradient-yellow inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-[var(--color-text-dark)] font-semibold hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
+					>
+						<span>👤</span> Daftar Jadi Anggota
+					</a>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- About Brief -->
-	<section class="section about-preview">
-		<div class="container">
-			<div class="section-header">
-				<h2>Sekilas Tentang Kami</h2>
-				<div class="divider"></div>
+	<section class="py-16 md:py-20 lg:py-24">
+		<div class="max-w-7xl mx-auto px-4 md:px-6">
+			<div class="text-center mb-12 md:mb-16">
+				<h2
+					class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)] mb-4"
+				>
+					Sekilas Tentang Kami
+				</h2>
+				<div
+					class="h-1 w-20 bg-[var(--color-accent-yellow)] mx-auto rounded-full"
+				>
+				</div>
 			</div>
-			<div class="grid-3">
-				<div class="card about-card">
-					<h3>Sejarah Singkat</h3>
-					<p>
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+			>
+				<div
+					class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+				>
+					<h3
+						class="text-[var(--color-primary-green)] text-xl font-bold mb-4"
+					>
+						Sejarah Singkat
+					</h3>
+					<p class="text-[var(--color-text-grey)]">
 						Berdiri sejak [Year] dan disahkan pada [Year],
 						[Cooperative Name] gotong royong.
 					</p>
 				</div>
-				<div class="card about-card">
-					<h3>Statistik Koperasi</h3>
-					<ul class="stats-list">
-						<li><strong>[Number]+</strong> Anggota Aktif</li>
-						<li><strong>[Amount]+</strong> Total Aset</li>
-						<li><strong>[Number]</strong> Kantor Cabang</li>
+				<div
+					class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+				>
+					<h3
+						class="text-[var(--color-primary-green)] text-xl font-bold mb-4"
+					>
+						Statistik Koperasi
+					</h3>
+					<ul class="space-y-3">
+						<li
+							class="flex justify-between py-3 border-b border-slate-100"
+						>
+							<strong>[Number]+</strong>
+							<span class="text-[var(--color-text-grey)]"
+								>Anggota Aktif</span
+							>
+						</li>
+						<li
+							class="flex justify-between py-3 border-b border-slate-100"
+						>
+							<strong>[Amount]+</strong>
+							<span class="text-[var(--color-text-grey)]"
+								>Total Aset</span
+							>
+						</li>
+						<li class="flex justify-between py-3">
+							<strong>[Number]</strong>
+							<span class="text-[var(--color-text-grey)]"
+								>Kantor Cabang</span
+							>
+						</li>
 					</ul>
 				</div>
-				<div class="card about-card">
-					<h3>Visi & Misi</h3>
-					<p>
+				<div
+					class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300 md:col-span-2 lg:col-span-1"
+				>
+					<h3
+						class="text-[var(--color-primary-green)] text-xl font-bold mb-4"
+					>
+						Visi & Misi
+					</h3>
+					<p class="text-[var(--color-text-grey)]">
 						Menjadi koperasi terpercaya yang mensejahterakan anggota
-						melalui pengelolaan keuangan yang tranparan dan
+						melalui pengelolaan keuangan yang transparan dan
 						profesional.
 					</p>
 				</div>
 			</div>
-			<div class="text-center" style="margin-top: 2rem;">
-				<a href="/about" class="btn btn-outline-primary"
-					>Lihat Profil Lengkap</a
+			<div class="text-center mt-10">
+				<a
+					href="/about"
+					class="inline-block px-8 py-3 rounded-full border-2 border-[var(--color-primary-green)] text-[var(--color-primary-green)] font-semibold hover:bg-[var(--color-primary-green)] hover:text-white transition-all duration-200"
 				>
+					Lihat Profil Lengkap
+				</a>
 			</div>
 		</div>
 	</section>
 
 	<!-- Services Preview -->
-	<section class="section bg-light">
-		<div class="container">
-			<div class="section-header">
-				<h2>Layanan Utama</h2>
-				<p>Solusi keuangan untuk masa depan yang lebih baik</p>
+	<section class="py-16 md:py-20 lg:py-24 bg-[var(--color-bg-light)]">
+		<div class="max-w-7xl mx-auto px-4 md:px-6">
+			<div class="text-center mb-12 md:mb-16">
+				<h2
+					class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)] mb-4"
+				>
+					Layanan Utama
+				</h2>
+				<p class="text-[var(--color-text-grey)]">
+					Solusi keuangan untuk masa depan yang lebih baik
+				</p>
 			</div>
-			<div class="grid-3">
-				<div class="card service-card">
-					<div class="service-icon">💰</div>
-					<h3>Simpanan</h3>
-					<p>
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+			>
+				<div
+					class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+				>
+					<div class="text-5xl mb-6">💰</div>
+					<h3
+						class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+					>
+						Simpanan
+					</h3>
+					<p class="text-[var(--color-text-grey)] mb-6">
 						Berbagai jenis simpanan dengan bunga kompetitif dan aman
 						untuk masa depan Anda.
 					</p>
-					<a href="/services" class="link-arrow"
-						>Pelajari Lebih Lanjut →</a
+					<a
+						href="/services"
+						class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-semibold hover:gap-2 transition-all duration-200"
 					>
+						Pelajari Lebih Lanjut →
+					</a>
 				</div>
-				<div class="card service-card">
-					<div class="service-icon">🤝</div>
-					<h3>Pinjaman</h3>
-					<p>
+				<div
+					class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+				>
+					<div class="text-5xl mb-6">🤝</div>
+					<h3
+						class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+					>
+						Pinjaman
+					</h3>
+					<p class="text-[var(--color-text-grey)] mb-6">
 						Proses mudah dan cepat untuk kebutuhan usaha,
 						pendidikan, atau keperluan mendesak.
 					</p>
-					<a href="/services" class="link-arrow">Lihat Simulasi →</a>
+					<a
+						href="/services"
+						class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-semibold hover:gap-2 transition-all duration-200"
+					>
+						Lihat Simulasi →
+					</a>
 				</div>
-				<div class="card service-card">
-					<div class="service-icon">📈</div>
-					<h3>SHU & Manfaat</h3>
-					<p>
+				<div
+					class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300 md:col-span-2 lg:col-span-1"
+				>
+					<div class="text-5xl mb-6">📈</div>
+					<h3
+						class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+					>
+						SHU & Manfaat
+					</h3>
+					<p class="text-[var(--color-text-grey)] mb-6">
 						Nikmati sisa hasil usaha tahunan dan berbagai manfaat
 						kesejahteraan lainnya.
 					</p>
-					<a href="/services" class="link-arrow">Cek Manfaat →</a>
+					<a
+						href="/services"
+						class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-semibold hover:gap-2 transition-all duration-200"
+					>
+						Cek Manfaat →
+					</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Testimonials -->
-	<section class="section">
-		<div class="container">
-			<div class="section-header">
-				<h2>Mengapa Bergabung?</h2>
+	<section class="py-16 md:py-20 lg:py-24">
+		<div class="max-w-7xl mx-auto px-4 md:px-6">
+			<div class="text-center mb-12 md:mb-16">
+				<h2
+					class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
+				>
+					Mengapa Bergabung?
+				</h2>
 			</div>
-			<div class="grid-2 benefits-grid">
-				<div class="testimonial">
-					<blockquote>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+				<div
+					class="bg-[var(--color-bg-light)] p-8 md:p-10 border-l-4 border-[var(--color-primary-green)] rounded-xl"
+				>
+					<blockquote
+						class="text-lg md:text-xl italic text-[var(--color-text-dark)] mb-6"
+					>
 						"Sejak bergabung, usaha warung saya berkembang pesat
 						berkat pinjaman modal yang mudah. Koperasi ini
 						benar-benar mitra yang baik."
 					</blockquote>
-					<cite>— [Member Name], Anggota sejak [Year]</cite>
+					<cite class="text-[var(--color-text-grey)]"
+						>— [Member Name], Anggota sejak [Year]</cite
+					>
 				</div>
-				<div class="benefits-list">
-					<div class="benefit-item">
-						<span class="check">✔</span>
+				<div class="space-y-6">
+					<div class="flex gap-4">
+						<span
+							class="flex-shrink-0 w-8 h-8 bg-[var(--color-primary-green)] text-white rounded-full flex items-center justify-center text-sm font-bold"
+							>✔</span
+						>
 						<div>
-							<h4>Bunga Kompetitif</h4>
-							<p>
+							<h4
+								class="font-bold text-[var(--color-text-dark)] mb-1"
+							>
+								Bunga Kompetitif
+							</h4>
+							<p class="text-[var(--color-text-grey)]">
 								Bunga simpanan di atas rata-rata bank dan bunga
 								pinjaman ringan.
 							</p>
 						</div>
 					</div>
-					<div class="benefit-item">
-						<span class="check">✔</span>
+					<div class="flex gap-4">
+						<span
+							class="flex-shrink-0 w-8 h-8 bg-[var(--color-primary-green)] text-white rounded-full flex items-center justify-center text-sm font-bold"
+							>✔</span
+						>
 						<div>
-							<h4>Transparan</h4>
-							<p>
+							<h4
+								class="font-bold text-[var(--color-text-dark)] mb-1"
+							>
+								Transparan
+							</h4>
+							<p class="text-[var(--color-text-grey)]">
 								Pengelolaan dana yang terbuka dan laporan rutin
 								kepada anggota.
 							</p>
@@ -149,26 +276,55 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</section>
 
-	<!-- News Preview (Static for now) -->
-	<section class="section bg-light">
-		<div class="container">
-			<div class="section-header">
-				<h2>Berita Terbaru</h2>
-				<a href="/news" class="link-arrow" style="font-size: 0.9rem;"
-					>Lihat Semua Berita</a
+	<!-- News Preview -->
+	<section class="py-16 md:py-20 lg:py-24 bg-[var(--color-bg-light)]">
+		<div class="max-w-7xl mx-auto px-4 md:px-6">
+			<div
+				class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12 md:mb-16"
+			>
+				<h2
+					class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
 				>
+					Berita Terbaru
+				</h2>
+				<a
+					href="/news"
+					class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-semibold hover:gap-2 transition-all duration-200 text-sm"
+				>
+					Lihat Semua Berita →
+				</a>
 			</div>
-			<div class="grid-3">
-				<article class="card news-card">
-					<div class="news-img-placeholder">Foto Kegiatan</div>
-					<div class="news-content">
-						<span class="date">[Date]</span>
-						<h3>[Event Name]</h3>
-						<p>Pelaksanaan [Event Name] berjalan lancar...</p>
-						<a href="/news" class="read-more">Baca Selengkapnya</a>
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+			>
+				<article
+					class="bg-white rounded-xl shadow-md overflow-hidden hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+				>
+					<div
+						class="h-48 bg-slate-200 flex items-center justify-center text-slate-500 font-medium"
+					>
+						Foto Kegiatan
+					</div>
+					<div class="p-6">
+						<span
+							class="text-xs uppercase tracking-wider text-[var(--color-text-light)] mb-2 block"
+							>[Date]</span
+						>
+						<h3
+							class="text-lg font-bold text-[var(--color-text-dark)] mb-2"
+						>
+							[Event Name]
+						</h3>
+						<p class="text-[var(--color-text-grey)] text-sm mb-4">
+							Pelaksanaan [Event Name] berjalan lancar...
+						</p>
+						<a
+							href="/news"
+							class="text-[var(--color-primary-blue)] font-medium text-sm hover:underline"
+							>Baca Selengkapnya</a
+						>
 					</div>
 				</article>
-				<!-- Mock items -->
 			</div>
 		</div>
 	</section>

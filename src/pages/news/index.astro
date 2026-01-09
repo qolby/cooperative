@@ -10,27 +10,33 @@ const sortedNews = allNews.sort(
 ---
 
 <Layout title="Berita & Kegiatan">
+    <!-- Page Header -->
     <div
-        class="page-header"
-        style="background: var(--dark-blue); color: white; padding: 6rem 0 4rem; text-align: center;"
+        class="bg-[var(--color-dark-blue)] text-white py-16 md:py-24 text-center"
     >
-        <div class="container">
-            <h1>Berita & Kegiatan</h1>
-            <p>Informasi terbaru seputar aktivitas KSP CU Sinar Sejahtera</p>
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                Berita & Kegiatan
+            </h1>
+            <p class="text-lg md:text-xl text-white/90">
+                Informasi terbaru seputar aktivitas [Cooperative Name]
+            </p>
         </div>
     </div>
 
-    <section class="section">
-        <div class="container">
-            <div class="grid-3">
+    <section class="py-16 md:py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+            >
                 {
                     sortedNews.map((item) => (
-                        <article class="card news-card">
-                            <div class="news-img-placeholder">
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:-translate-y-2 hover:shadow-lg transition-all duration-300">
+                            <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-500 font-medium">
                                 Foto Kegiatan
                             </div>
-                            <div class="news-content">
-                                <span class="date">
+                            <div class="p-6">
+                                <span class="text-xs uppercase tracking-wider text-[var(--color-text-light)] mb-2 block">
                                     {new Date(
                                         item.data.date,
                                     ).toLocaleDateString("id-ID", {
@@ -39,13 +45,17 @@ const sortedNews = allNews.sort(
                                         day: "numeric",
                                     })}
                                 </span>
-                                <h3>{item.data.title}</h3>
-                                <p>{item.data.summary}</p>
+                                <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-2">
+                                    {item.data.title}
+                                </h3>
+                                <p class="text-[var(--color-text-grey)] text-sm mb-4">
+                                    {item.data.summary}
+                                </p>
                                 <a
                                     href={`/news/${item.slug}`}
-                                    class="read-more"
+                                    class="text-[var(--color-primary-blue)] font-medium text-sm hover:underline"
                                 >
-                                    Baca Selengkapnya
+                                    Baca Selengkapnya →
                                 </a>
                             </div>
                         </article>

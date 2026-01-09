@@ -3,78 +3,111 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Transparansi">
+    <!-- Page Header -->
     <div
-        class="page-header"
-        style="background: var(--dark-green); color: white; padding: 6rem 0 4rem; text-align: center;"
+        class="bg-[var(--color-dark-green)] text-white py-16 md:py-24 text-center"
     >
-        <div class="container">
-            <h1>Transparansi</h1>
-            <p>Laporan Keuangan dan Pertanggungjawaban Pengurus</p>
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                Transparansi
+            </h1>
+            <p class="text-lg md:text-xl text-white/90">
+                Laporan Keuangan dan Pertanggungjawaban Pengurus
+            </p>
         </div>
     </div>
 
-    <section id="reports" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Laporan Tahunan</h2>
-            </div>
-            <div class="card" style="padding: 2.5rem; overflow-x: auto;">
-                <table
-                    style="width: 100%; border-collapse: collapse; min-width: 600px;"
+    <!-- Reports Section -->
+    <section id="reports" class="py-16 md:py-20 lg:py-24">
+        <div class="max-w-5xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2
+                    class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
                 >
+                    Laporan Tahunan
+                </h2>
+            </div>
+            <div
+                class="bg-white rounded-xl p-6 md:p-8 shadow-md border border-black/[0.03] overflow-x-auto"
+            >
+                <table class="w-full min-w-[600px]">
                     <thead>
-                        <tr style="background: #eee; text-align: left;">
-                            <th style="padding: 1rem;">Nama Dokumen</th>
-                            <th style="padding: 1rem;">Tahun Buku</th>
-                            <th style="padding: 1rem;">Tanggal Upload</th>
-                            <th style="padding: 1rem;">Aksi</th>
+                        <tr class="bg-slate-100 text-left">
+                            <th
+                                class="px-4 py-4 font-semibold text-[var(--color-text-dark)] rounded-tl-lg"
+                                >Nama Dokumen</th
+                            >
+                            <th
+                                class="px-4 py-4 font-semibold text-[var(--color-text-dark)]"
+                                >Tahun Buku</th
+                            >
+                            <th
+                                class="px-4 py-4 font-semibold text-[var(--color-text-dark)]"
+                                >Tanggal Upload</th
+                            >
+                            <th
+                                class="px-4 py-4 font-semibold text-[var(--color-text-dark)] rounded-tr-lg"
+                                >Aksi</th
+                            >
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 1rem;"
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-4 py-4 text-[var(--color-text-grey)]"
                                 >Laporan RAT Tahun Buku 2025</td
                             >
-                            <td style="padding: 1rem;">2025</td>
-                            <td style="padding: 1rem;">15 Jan 2026</td>
-                            <td style="padding: 1rem;"
-                                ><a
-                                    href="#"
-                                    class="btn btn-primary"
-                                    style="padding: 5px 15px; font-size: 0.8rem;"
-                                    >Download</a
-                                ></td
+                            <td class="px-4 py-4 text-[var(--color-text-grey)]"
+                                >2025</td
                             >
+                            <td class="px-4 py-4 text-[var(--color-text-grey)]"
+                                >15 Jan 2026</td
+                            >
+                            <td class="px-4 py-4">
+                                <a
+                                    href="#"
+                                    class="inline-block px-4 py-2 rounded-full bg-[var(--color-primary-green)] text-white text-sm font-medium hover:bg-[var(--color-dark-green)] transition-colors"
+                                >
+                                    Download
+                                </a>
+                            </td>
                         </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 1rem;"
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-4 py-4 text-[var(--color-text-grey)]"
                                 >Laporan RAT Tahun Buku 2024</td
                             >
-                            <td style="padding: 1rem;">2024</td>
-                            <td style="padding: 1rem;">20 Jan 2025</td>
-                            <td style="padding: 1rem;"
-                                ><a
-                                    href="#"
-                                    class="btn btn-primary"
-                                    style="padding: 5px 15px; font-size: 0.8rem;"
-                                    >Download</a
-                                ></td
+                            <td class="px-4 py-4 text-[var(--color-text-grey)]"
+                                >2024</td
                             >
+                            <td class="px-4 py-4 text-[var(--color-text-grey)]"
+                                >20 Jan 2025</td
+                            >
+                            <td class="px-4 py-4">
+                                <a
+                                    href="#"
+                                    class="inline-block px-4 py-2 rounded-full bg-[var(--color-primary-green)] text-white text-sm font-medium hover:bg-[var(--color-dark-green)] transition-colors"
+                                >
+                                    Download
+                                </a>
+                            </td>
                         </tr>
-                        <tr>
-                            <td style="padding: 1rem;"
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-4 py-4 text-[var(--color-text-grey)]"
                                 >Laporan RAT Tahun Buku 2023</td
                             >
-                            <td style="padding: 1rem;">2023</td>
-                            <td style="padding: 1rem;">18 Jan 2024</td>
-                            <td style="padding: 1rem;"
-                                ><a
-                                    href="#"
-                                    class="btn btn-primary"
-                                    style="padding: 5px 15px; font-size: 0.8rem;"
-                                    >Download</a
-                                ></td
+                            <td class="px-4 py-4 text-[var(--color-text-grey)]"
+                                >2023</td
                             >
+                            <td class="px-4 py-4 text-[var(--color-text-grey)]"
+                                >18 Jan 2024</td
+                            >
+                            <td class="px-4 py-4">
+                                <a
+                                    href="#"
+                                    class="inline-block px-4 py-2 rounded-full bg-[var(--color-primary-green)] text-white text-sm font-medium hover:bg-[var(--color-dark-green)] transition-colors"
+                                >
+                                    Download
+                                </a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

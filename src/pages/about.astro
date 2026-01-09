@@ -3,32 +3,45 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Tentang Kami">
+    <!-- Page Header -->
     <div
-        class="page-header"
-        style="background: var(--dark-green); color: white; padding: 6rem 0 4rem; text-align: center;"
+        class="bg-[var(--color-dark-green)] text-white py-16 md:py-24 text-center"
     >
-        <div class="container">
-            <h1>Tentang Kami</h1>
-            <p>Mengenal lebih dekat [Cooperative Name]</p>
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                Tentang Kami
+            </h1>
+            <p class="text-lg md:text-xl text-white/90">
+                Mengenal lebih dekat [Cooperative Name]
+            </p>
         </div>
     </div>
 
-    <section id="history" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Sejarah Kami</h2>
-                <div class="divider"></div>
+    <!-- History Section -->
+    <section id="history" class="py-16 md:py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2
+                    class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)] mb-4"
+                >
+                    Sejarah Kami
+                </h2>
+                <div
+                    class="h-1 w-20 bg-[var(--color-accent-yellow)] mx-auto rounded-full"
+                >
+                </div>
             </div>
-            <div class="card" style="padding: 3rem;">
-                <p>
+            <div
+                class="bg-white rounded-xl p-8 md:p-12 shadow-md border border-black/[0.03]"
+            >
+                <p class="text-[var(--color-text-grey)] leading-relaxed mb-4">
                     [Cooperative Name] didirikan pada tanggal [Date Month Year]
                     atas inisiatif [Number] orang pendiri yang peduli terhadap
                     kesejahteraan ekonomi masyarakat sekitar. Berawal dari
                     [Community Group Name] gotong royong, kami tumbuh menjadi
                     lembaga keuangan mikro yang profesional.
                 </p>
-                <br />
-                <p>
+                <p class="text-[var(--color-text-grey)] leading-relaxed">
                     Pada tahun [Year], kami resmi mendapatkan Badan Hukum
                     Koperasi dari [Local Authority/Government Body]. Sejak saat
                     itu, kami terus bertumbuh baik dari segi jumlah anggota
@@ -39,21 +52,39 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </section>
 
-    <section id="vision" class="section bg-light">
-        <div class="container">
-            <div class="grid-2">
-                <div class="card about-card text-center">
-                    <div class="service-icon">👁️</div>
-                    <h3>Visi</h3>
-                    <p>
+    <!-- Vision & Mission Section -->
+    <section
+        id="vision"
+        class="py-16 md:py-20 lg:py-24 bg-[var(--color-bg-light)]"
+    >
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <div
+                    class="bg-white rounded-xl p-8 md:p-10 shadow-md border border-black/[0.03] text-center"
+                >
+                    <div class="text-5xl mb-6">👁️</div>
+                    <h3
+                        class="text-[var(--color-primary-green)] text-xl font-bold mb-4"
+                    >
+                        Visi
+                    </h3>
+                    <p class="text-[var(--color-text-grey)]">
                         Menjadi Koperasi Kredit yang Terpercaya, Mandiri, dan
                         Berkualitas dalam mensejahterakan Anggota.
                     </p>
                 </div>
-                <div class="card about-card">
-                    <div class="service-icon text-center">🎯</div>
-                    <h3 class="text-center">Misi</h3>
-                    <ul style="list-style: disc; padding-left: 1.5rem;">
+                <div
+                    class="bg-white rounded-xl p-8 md:p-10 shadow-md border border-black/[0.03]"
+                >
+                    <div class="text-5xl mb-6 text-center">🎯</div>
+                    <h3
+                        class="text-[var(--color-primary-green)] text-xl font-bold mb-4 text-center"
+                    >
+                        Misi
+                    </h3>
+                    <ul
+                        class="list-disc pl-6 text-[var(--color-text-grey)] space-y-2"
+                    >
                         <li>
                             Memberikan pelayanan keuangan yang prima dan
                             professional.
@@ -76,45 +107,58 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </section>
 
-    <section id="structure" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Struktur Pengurus</h2>
+    <!-- Structure Section -->
+    <section id="structure" class="py-16 md:py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2
+                    class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
+                >
+                    Struktur Pengurus
+                </h2>
             </div>
-            <!-- Structure Chart Placeholder -->
-            <div
-                class="structure-chart text-center"
-                style="background: #f9f9f9; padding: 2rem; border-radius: 8px;"
-            >
-                <div class="level-1" style="margin-bottom: 2rem;">
+            <!-- Structure Chart -->
+            <div class="bg-slate-50 p-8 md:p-12 rounded-xl text-center">
+                <div class="mb-8">
                     <div
-                        class="person-card"
-                        style="display: inline-block; padding: 1rem; border: 1px solid #ddd; background: white; border-radius: 8px;"
+                        class="inline-block px-8 py-4 bg-white border border-slate-200 rounded-xl shadow-sm"
                     >
-                        <strong>Ketua</strong>
-                        <br />Bpk. Nama Ketua
+                        <strong class="text-[var(--color-text-dark)]"
+                            >Ketua</strong
+                        >
+                        <br />
+                        <span class="text-[var(--color-text-grey)]"
+                            >Bpk. Nama Ketua</span
+                        >
                     </div>
                 </div>
                 <div
-                    class="level-2"
-                    style="display: flex; justify-content: center; gap: 2rem;"
+                    class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8"
                 >
                     <div
-                        class="person-card"
-                        style="padding: 1rem; border: 1px solid #ddd; background: white; border-radius: 8px;"
+                        class="px-8 py-4 bg-white border border-slate-200 rounded-xl shadow-sm"
                     >
-                        <strong>Sekretaris</strong>
-                        <br />Ibu. Nama Sekretaris
+                        <strong class="text-[var(--color-text-dark)]"
+                            >Sekretaris</strong
+                        >
+                        <br />
+                        <span class="text-[var(--color-text-grey)]"
+                            >Ibu. Nama Sekretaris</span
+                        >
                     </div>
                     <div
-                        class="person-card"
-                        style="padding: 1rem; border: 1px solid #ddd; background: white; border-radius: 8px;"
+                        class="px-8 py-4 bg-white border border-slate-200 rounded-xl shadow-sm"
                     >
-                        <strong>Bendahara</strong>
-                        <br />Ibu. Nama Bendahara
+                        <strong class="text-[var(--color-text-dark)]"
+                            >Bendahara</strong
+                        >
+                        <br />
+                        <span class="text-[var(--color-text-grey)]"
+                            >Ibu. Nama Bendahara</span
+                        >
                     </div>
                 </div>
-                <p style="margin-top: 2rem; color: #777;">
+                <p class="mt-8 text-slate-500 text-sm">
                     *Ditambah staff manajemen profesional dan pengawas
                 </p>
             </div>

@@ -3,39 +3,70 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Keanggotaan">
+    <!-- Page Header -->
     <div
-        class="page-header"
-        style="background: var(--accent-orange); color: white; padding: 6rem 0 4rem; text-align: center;"
+        class="bg-[var(--color-accent-orange)] text-white py-16 md:py-24 text-center"
     >
-        <div class="container">
-            <h1>Keanggotaan</h1>
-            <p>Bergabunglah menjadi pemilik dan pengguna layanan koperasi</p>
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                Keanggotaan
+            </h1>
+            <p class="text-lg md:text-xl text-white/90">
+                Bergabunglah menjadi pemilik dan pengguna layanan koperasi
+            </p>
         </div>
     </div>
 
-    <section id="benefits" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Manfaat Anggota</h2>
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 md:py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2
+                    class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
+                >
+                    Manfaat Anggota
+                </h2>
             </div>
-            <div class="grid-3">
-                <div class="card text-center" style="padding: 2rem;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎓</div>
-                    <h3>Pendidikan</h3>
-                    <p>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+            >
+                <div
+                    class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+                >
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3
+                        class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+                    >
+                        Pendidikan
+                    </h3>
+                    <p class="text-[var(--color-text-grey)]">
                         Mendapatkan pendidikan dasar perkoperasian dan manajemen
                         keuangan.
                     </p>
                 </div>
-                <div class="card text-center" style="padding: 2rem;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">☂️</div>
-                    <h3>Santunan Duka</h3>
-                    <p>Solidaritas kematian untuk anggota dan keluarga inti.</p>
+                <div
+                    class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+                >
+                    <div class="text-5xl mb-4">☂️</div>
+                    <h3
+                        class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+                    >
+                        Santunan Duka
+                    </h3>
+                    <p class="text-[var(--color-text-grey)]">
+                        Solidaritas kematian untuk anggota dan keluarga inti.
+                    </p>
                 </div>
-                <div class="card text-center" style="padding: 2rem;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎁</div>
-                    <h3>Souvenir RAT</h3>
-                    <p>
+                <div
+                    class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-300 md:col-span-2 lg:col-span-1"
+                >
+                    <div class="text-5xl mb-4">🎁</div>
+                    <h3
+                        class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+                    >
+                        Souvenir RAT
+                    </h3>
+                    <p class="text-[var(--color-text-grey)]">
                         Mendapatkan souvenir dan doorprize setiap Rapat Anggota
                         Tahunan.
                     </p>
@@ -44,16 +75,25 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </section>
 
-    <section id="join" class="section bg-light">
-        <div class="container">
+    <!-- Registration Requirements -->
+    <section
+        id="join"
+        class="py-16 md:py-20 lg:py-24 bg-[var(--color-bg-light)]"
+    >
+        <div class="max-w-3xl mx-auto px-4 md:px-6">
             <div
-                class="card"
-                style="max-width: 800px; margin: 0 auto; padding: 3rem;"
+                class="bg-white rounded-xl p-8 md:p-12 shadow-md border border-black/[0.03]"
             >
-                <div class="section-header">
-                    <h2>Syarat & Prosedur Pendaftaran</h2>
+                <div class="text-center mb-8">
+                    <h2
+                        class="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)]"
+                    >
+                        Syarat & Prosedur Pendaftaran
+                    </h2>
                 </div>
-                <ol style="padding-left: 1.5rem; line-height: 2;">
+                <ol
+                    class="list-decimal pl-6 text-[var(--color-text-grey)] space-y-3 text-lg"
+                >
                     <li>Mengisi Formulir Permohonan Menjadi Anggota.</li>
                     <li>
                         Melampirkan fotocopy KTP (Suami & Istri bagi yang
@@ -68,14 +108,21 @@ import Layout from "../layouts/Layout.astro";
                     </li>
                     <li>Membayar Biaya Administrasi Rp 25.000,-.</li>
                 </ol>
-                <div class="text-center" style="margin-top: 3rem;">
-                    <h3>Siap Bergabung?</h3>
-                    <p style="margin-bottom: 1.5rem;">
+                <div class="text-center mt-10">
+                    <h3
+                        class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+                    >
+                        Siap Bergabung?
+                    </h3>
+                    <p class="text-[var(--color-text-grey)] mb-6">
                         Unduh formulir, isi di rumah, dan bawa ke kantor kami.
                     </p>
-                    <a href="#" class="btn btn-primary"
-                        >⬇️ Download Formulir Pendaftaran (PDF)</a
+                    <a
+                        href="#"
+                        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[var(--color-primary-green)] text-white font-semibold hover:bg-[var(--color-dark-green)] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
                     >
+                        ⬇️ Download Formulir Pendaftaran (PDF)
+                    </a>
                 </div>
             </div>
         </div>
