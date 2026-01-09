@@ -4,41 +4,72 @@ import Calculator from "../components/Calculator.jsx";
 ---
 
 <Layout title="Layanan Kami">
+    <!-- Page Header -->
     <div
-        class="page-header"
-        style="background: var(--primary-blue); color: white; padding: 6rem 0 4rem; text-align: center;"
+        class="bg-[var(--color-primary-blue)] text-white py-16 md:py-24 text-center"
     >
-        <div class="container">
-            <h1>Layanan Kami</h1>
-            <p>Produk Simpanan dan Pinjaman untuk Kebutuhan Anda</p>
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                Layanan Kami
+            </h1>
+            <p class="text-lg md:text-xl text-white/90">
+                Produk Simpanan dan Pinjaman untuk Kebutuhan Anda
+            </p>
         </div>
     </div>
 
-    <!-- Simpanan -->
-    <section id="simpanan" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Produk Simpanan</h2>
-                <div class="divider"></div>
+    <!-- Simpanan Section -->
+    <section id="simpanan" class="py-16 md:py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-16">
+                <h2
+                    class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)] mb-4"
+                >
+                    Produk Simpanan
+                </h2>
+                <div
+                    class="h-1 w-20 bg-[var(--color-accent-yellow)] mx-auto rounded-full"
+                >
+                </div>
             </div>
-            <div class="grid-3">
-                <div class="card service-card">
-                    <h3>Simpanan Saham</h3>
-                    <p>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+            >
+                <div
+                    class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+                >
+                    <h3
+                        class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+                    >
+                        Simpanan Saham
+                    </h3>
+                    <p class="text-[var(--color-text-grey)]">
                         Simpanan Pokok & Wajib sebagai bukti kepemilikan
                         anggota. Mendapatkan SHU setiap tahun.
                     </p>
                 </div>
-                <div class="card service-card">
-                    <h3>Simpanan Sukarela</h3>
-                    <p>
+                <div
+                    class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+                >
+                    <h3
+                        class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+                    >
+                        Simpanan Sukarela
+                    </h3>
+                    <p class="text-[var(--color-text-grey)]">
                         Simpanan yang bisa disetor dan ditarik kapan saja dengan
                         bunga harian.
                     </p>
                 </div>
-                <div class="card service-card">
-                    <h3>Simpanan Pendidikan</h3>
-                    <p>
+                <div
+                    class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300 md:col-span-2 lg:col-span-1"
+                >
+                    <h3
+                        class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+                    >
+                        Simpanan Pendidikan
+                    </h3>
+                    <p class="text-[var(--color-text-grey)]">
                         Persiapkan biaya pendidikan anak sejak dini dengan bunga
                         khusus dan jangka waktu tertentu.
                     </p>
@@ -47,35 +78,65 @@ import Calculator from "../components/Calculator.jsx";
         </div>
     </section>
 
-    <!-- Pinjaman & Calculator -->
-    <section id="pinjaman" class="section bg-light">
-        <div class="container">
-            <div class="grid-2" style="align-items: start;">
+    <!-- Pinjaman & Calculator Section -->
+    <section
+        id="pinjaman"
+        class="py-16 md:py-20 lg:py-24 bg-[var(--color-bg-light)]"
+    >
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div
+                class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start"
+            >
                 <div>
-                    <div class="section-header" style="text-align: left;">
-                        <h2>Produk Pinjaman</h2>
-                        <div
-                            class="divider"
-                            style="margin: 0; margin-bottom: 1rem;"
-                        >
-                        </div>
+                    <h2
+                        class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)] mb-4"
+                    >
+                        Produk Pinjaman
+                    </h2>
+                    <div
+                        class="h-1 w-20 bg-[var(--color-accent-yellow)] rounded-full mb-6"
+                    >
                     </div>
-                    <p class="mb-2">
+                    <p class="text-[var(--color-text-grey)] mb-8">
                         Kami menyediakan berbagai jenis pinjaman dengan proses
                         cepat dan syarat mudah untuk kesejahteraan anggota.
                     </p>
-                    <ul class="benefits-list">
-                        <li class="benefit-item">
-                            <span class="check">✔</span> Pinjaman Modal Usaha
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="flex-shrink-0 w-7 h-7 bg-[var(--color-primary-green)] text-white rounded-full flex items-center justify-center text-sm"
+                                >✔</span
+                            >
+                            <span class="text-[var(--color-text-grey)]"
+                                >Pinjaman Modal Usaha</span
+                            >
                         </li>
-                        <li class="benefit-item">
-                            <span class="check">✔</span> Pinjaman Renovasi Rumah
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="flex-shrink-0 w-7 h-7 bg-[var(--color-primary-green)] text-white rounded-full flex items-center justify-center text-sm"
+                                >✔</span
+                            >
+                            <span class="text-[var(--color-text-grey)]"
+                                >Pinjaman Renovasi Rumah</span
+                            >
                         </li>
-                        <li class="benefit-item">
-                            <span class="check">✔</span> Pinjaman Kendaran Bermotor
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="flex-shrink-0 w-7 h-7 bg-[var(--color-primary-green)] text-white rounded-full flex items-center justify-center text-sm"
+                                >✔</span
+                            >
+                            <span class="text-[var(--color-text-grey)]"
+                                >Pinjaman Kendaran Bermotor</span
+                            >
                         </li>
-                        <li class="benefit-item">
-                            <span class="check">✔</span> Pinjaman Darurat / Kesehatan
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="flex-shrink-0 w-7 h-7 bg-[var(--color-primary-green)] text-white rounded-full flex items-center justify-center text-sm"
+                                >✔</span
+                            >
+                            <span class="text-[var(--color-text-grey)]"
+                                >Pinjaman Darurat / Kesehatan</span
+                            >
                         </li>
                     </ul>
                 </div>
@@ -86,11 +147,15 @@ import Calculator from "../components/Calculator.jsx";
         </div>
     </section>
 
-    <!-- SHU -->
-    <section id="shu" class="section">
-        <div class="container text-center">
-            <h2>Sisa Hasil Usaha (SHU)</h2>
-            <p>
+    <!-- SHU Section -->
+    <section id="shu" class="py-16 md:py-20 lg:py-24">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 text-center">
+            <h2
+                class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)] mb-6"
+            >
+                Sisa Hasil Usaha (SHU)
+            </h2>
+            <p class="text-[var(--color-text-grey)] text-lg">
                 SHU dibagikan setiap tahun berdasarkan partisipasi jasa usaha
                 (pinjaman) dan jasa modal (simpanan) anggota.
             </p>

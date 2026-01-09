@@ -3,33 +3,42 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Hubungi Kami">
-    <div
-        class="page-header"
-        style="background: var(--text-dark); color: white; padding: 6rem 0 4rem; text-align: center;"
-    >
-        <div class="container">
-            <h1>Hubungi Kami</h1>
-            <p>
+    <!-- Page Header -->
+    <div class="bg-slate-800 text-white py-16 md:py-24 text-center">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                Hubungi Kami
+            </h1>
+            <p class="text-lg md:text-xl text-white/90">
                 Kami siap membantu Anda. Silakan hubungi kami melalui saluran di
                 bawah ini.
             </p>
         </div>
     </div>
 
-    <section class="section">
-        <div class="container">
-            <div class="grid-2">
+    <section class="py-16 md:py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                 <!-- Contact Info & Map -->
                 <div>
-                    <h3>Kantor Pusat</h3>
-                    <p class="mb-2">[Street Address, City, Province]</p>
+                    <h3
+                        class="text-xl font-bold text-[var(--color-text-dark)] mb-4"
+                    >
+                        Kantor Pusat
+                    </h3>
+                    <p class="text-[var(--color-text-grey)] mb-6">
+                        [Street Address, City, Province]
+                    </p>
 
-                    <ul style="margin-bottom: 2rem;">
-                        <li style="margin-bottom: 10px;">
-                            📞 Telepon: (021) 555-0123
+                    <ul class="space-y-4 mb-8">
+                        <li
+                            class="flex items-center gap-3 text-[var(--color-text-grey)]"
+                        >
+                            <span>📞</span>
+                            <span>Telepon: (021) 555-0123</span>
                         </li>
                         <li
-                            style="margin-bottom: 10px; display: flex; align-items: center; gap: 8px;"
+                            class="flex items-center gap-3 text-[var(--color-text-grey)]"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -37,62 +46,121 @@ import Layout from "../layouts/Layout.astro";
                                 height="18"
                                 viewBox="0 0 24 24"
                                 fill="currentColor"
-                                ><path
-                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
-                                ></path></svg
+                                class="text-[#25D366]"
                             >
-                            WhatsApp: +62 800-0000-0000
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                                ></path>
+                            </svg>
+                            <span>WhatsApp: +62 800-0000-0000</span>
                         </li>
-                        <li style="margin-bottom: 10px;">
-                            ✉️ Email: contact@example.com
+                        <li
+                            class="flex items-center gap-3 text-[var(--color-text-grey)]"
+                        >
+                            <span>✉️</span>
+                            <span>Email: contact@example.com</span>
                         </li>
                     </ul>
 
-                    <!-- Fake Map -->
+                    <!-- Map Placeholder -->
                     <div
-                        style="background: #eee; height: 300px; width: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #777;"
+                        class="bg-slate-100 h-72 rounded-xl flex items-center justify-center text-slate-500"
                     >
                         (Google Maps Embed Placeholder)
                     </div>
                 </div>
 
                 <!-- Contact Form -->
-                <div class="card">
-                    <h3>Kirim Pesan</h3>
-                    <div id="successMessage" class="success-msg">
+                <div
+                    class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03]"
+                >
+                    <h3
+                        class="text-xl font-bold text-[var(--color-text-dark)] mb-6"
+                    >
+                        Kirim Pesan
+                    </h3>
+                    <div
+                        id="successMessage"
+                        class="hidden bg-green-100 text-green-800 p-4 rounded-lg mb-6 font-medium"
+                    >
                         Pesan Anda berhasil terkirim! Kami akan segera
                         menghubungi Anda.
                     </div>
-                    <form id="contactForm">
+                    <form id="contactForm" class="space-y-5">
                         <div class="form-group">
-                            <label for="name">Nama Lengkap</label>
-                            <input type="text" id="name" required />
-                            <span class="error-msg">Nama wajib diisi.</span>
+                            <label
+                                for="name"
+                                class="block mb-2 font-semibold text-[var(--color-text-dark)]"
+                                >Nama Lengkap</label
+                            >
+                            <input
+                                type="text"
+                                id="name"
+                                required
+                                class="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:border-[var(--color-primary-green)] focus:outline-none transition-colors"
+                            />
+                            <span
+                                class="error-msg hidden text-red-500 text-sm mt-1"
+                                >Nama wajib diisi.</span
+                            >
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" required />
-                            <span class="error-msg"
+                            <label
+                                for="email"
+                                class="block mb-2 font-semibold text-[var(--color-text-dark)]"
+                                >Email</label
+                            >
+                            <input
+                                type="email"
+                                id="email"
+                                required
+                                class="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:border-[var(--color-primary-green)] focus:outline-none transition-colors"
+                            />
+                            <span
+                                class="error-msg hidden text-red-500 text-sm mt-1"
                                 >Masukkan email yang valid.</span
                             >
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subjek</label>
-                            <input type="text" id="subject" required />
-                            <span class="error-msg">Subjek wajib diisi.</span>
+                            <label
+                                for="subject"
+                                class="block mb-2 font-semibold text-[var(--color-text-dark)]"
+                                >Subjek</label
+                            >
+                            <input
+                                type="text"
+                                id="subject"
+                                required
+                                class="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:border-[var(--color-primary-green)] focus:outline-none transition-colors"
+                            />
+                            <span
+                                class="error-msg hidden text-red-500 text-sm mt-1"
+                                >Subjek wajib diisi.</span
+                            >
                         </div>
                         <div class="form-group">
-                            <label for="message">Pesan</label>
-                            <textarea id="message" rows="5" required></textarea>
-                            <span class="error-msg"
+                            <label
+                                for="message"
+                                class="block mb-2 font-semibold text-[var(--color-text-dark)]"
+                                >Pesan</label
+                            >
+                            <textarea
+                                id="message"
+                                rows="5"
+                                required
+                                class="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:border-[var(--color-primary-green)] focus:outline-none transition-colors resize-none"
+                            ></textarea>
+                            <span
+                                class="error-msg hidden text-red-500 text-sm mt-1"
                                 >Pesan tidak boleh kosong.</span
                             >
                         </div>
                         <button
                             type="submit"
-                            class="btn btn-primary"
-                            style="width: 100%;">Kirim Pesan</button
+                            class="w-full py-3.5 rounded-full bg-[var(--color-primary-green)] text-white font-semibold hover:bg-[var(--color-dark-green)] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
                         >
+                            Kirim Pesan
+                        </button>
                     </form>
                 </div>
             </div>
@@ -106,7 +174,12 @@ import Layout from "../layouts/Layout.astro";
                 e.preventDefault();
                 let isValid = true;
                 const formGroups = document.querySelectorAll(".form-group");
-                formGroups.forEach((g) => g.classList.remove("error"));
+                formGroups.forEach((g) => {
+                    g.querySelector(".error-msg")?.classList.add("hidden");
+                    g.querySelector("input, textarea")?.classList.remove(
+                        "border-red-500",
+                    );
+                });
 
                 const name = document.getElementById(
                     "name",
@@ -122,19 +195,31 @@ import Layout from "../layouts/Layout.astro";
                 ) as HTMLTextAreaElement;
 
                 if (!name.value.trim()) {
-                    name.parentElement?.classList.add("error");
+                    name.parentElement
+                        ?.querySelector(".error-msg")
+                        ?.classList.remove("hidden");
+                    name.classList.add("border-red-500");
                     isValid = false;
                 }
                 if (!email.value.trim() || !email.value.includes("@")) {
-                    email.parentElement?.classList.add("error");
+                    email.parentElement
+                        ?.querySelector(".error-msg")
+                        ?.classList.remove("hidden");
+                    email.classList.add("border-red-500");
                     isValid = false;
                 }
                 if (!subject.value.trim()) {
-                    subject.parentElement?.classList.add("error");
+                    subject.parentElement
+                        ?.querySelector(".error-msg")
+                        ?.classList.remove("hidden");
+                    subject.classList.add("border-red-500");
                     isValid = false;
                 }
                 if (!message.value.trim()) {
-                    message.parentElement?.classList.add("error");
+                    message.parentElement
+                        ?.querySelector(".error-msg")
+                        ?.classList.remove("hidden");
+                    message.classList.add("border-red-500");
                     isValid = false;
                 }
 
@@ -148,7 +233,8 @@ import Layout from "../layouts/Layout.astro";
                         setTimeout(() => {
                             const successMsg =
                                 document.getElementById("successMessage");
-                            if (successMsg) successMsg.style.display = "block";
+                            if (successMsg)
+                                successMsg.classList.remove("hidden");
                             (form as HTMLFormElement).reset();
                             btn.innerText = originalText;
                             btn.disabled = false;

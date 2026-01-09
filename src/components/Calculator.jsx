@@ -63,18 +63,23 @@ export default function Calculator() {
     };
 
     return (
-        <div className="card calculator-card">
-            <div className="calc-tabs" style={{ display: 'flex', gap: '10px', marginBottom: '1.5rem' }}>
+        <div className="bg-white rounded-xl p-6 md:p-8 shadow-md border border-black/[0.03]">
+            {/* Tabs */}
+            <div className="flex gap-3 mb-6">
                 <button
                     onClick={() => setActiveTab('loan')}
-                    className={`btn ${activeTab === 'loan' ? 'btn-primary' : ''}`}
-                    style={{ flex: 1, padding: '10px', background: activeTab === 'loan' ? 'var(--primary-green)' : '#eee', color: activeTab === 'loan' ? 'white' : 'var(--text-dark)' }}>
+                    className={`flex-1 py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 ${activeTab === 'loan'
+                            ? 'bg-[#2ecc71] text-white shadow-sm'
+                            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                        }`}>
                     Pinjaman
                 </button>
                 <button
                     onClick={() => setActiveTab('savings')}
-                    className={`btn ${activeTab === 'savings' ? 'btn-primary' : ''}`}
-                    style={{ flex: 1, padding: '10px', background: activeTab === 'savings' ? 'var(--accent-orange)' : '#eee', color: activeTab === 'savings' ? 'white' : 'var(--text-dark)' }}>
+                    className={`flex-1 py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 ${activeTab === 'savings'
+                            ? 'bg-[#f39c12] text-white shadow-sm'
+                            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                        }`}>
                     Simpanan
                 </button>
             </div>
@@ -82,46 +87,50 @@ export default function Calculator() {
             {/* Loan View */}
             {activeTab === 'loan' && (
                 <div className="fade-in">
-                    <h3>🔢 Simulasi Pinjaman</h3>
-                    <div className="form-group" style={{ marginBottom: '1rem' }}>
-                        <label>Jumlah Pinjaman (Rp)</label>
+                    <h3 className="text-lg font-bold text-slate-800 mb-4">🔢 Simulasi Pinjaman</h3>
+                    <div className="mb-4">
+                        <label className="block text-sm font-semibold text-slate-700 mb-1.5">Jumlah Pinjaman (Rp)</label>
                         <input
                             type="number"
                             value={loanAmount}
                             onChange={(e) => setLoanAmount(e.target.value)}
                             placeholder="Contoh: 10000000"
-                            style={{ width: '100%', padding: '10px', marginTop: '5px', border: '1px solid #ddd', borderRadius: '4px' }}
+                            className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:border-[#2ecc71] focus:outline-none transition-colors"
                         />
                     </div>
-                    <div className="form-group" style={{ marginBottom: '1rem' }}>
-                        <label>Jangka Waktu (Bulan)</label>
+                    <div className="mb-6">
+                        <label className="block text-sm font-semibold text-slate-700 mb-1.5">Jangka Waktu (Bulan)</label>
                         <select
                             value={loanDuration}
                             onChange={(e) => setLoanDuration(e.target.value)}
-                            style={{ width: '100%', padding: '10px', marginTop: '5px', border: '1px solid #ddd', borderRadius: '4px' }}>
+                            className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:border-[#2ecc71] focus:outline-none transition-colors bg-white">
                             <option value="6">6 Bulan</option>
                             <option value="12">12 Bulan</option>
                             <option value="24">24 Bulan</option>
                             <option value="36">36 Bulan</option>
                         </select>
                     </div>
-                    <button onClick={calculateLoan} className="btn btn-primary" style={{ width: '100%' }}>Hitung Angsuran</button>
+                    <button
+                        onClick={calculateLoan}
+                        className="w-full py-3.5 rounded-full bg-[#2ecc71] text-white font-semibold hover:bg-[#27ae60] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
+                        Hitung Angsuran
+                    </button>
 
                     {loanResult && (
-                        <div className="fade-in" style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px dashed #ddd' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
+                        <div className="fade-in mt-6 pt-4 border-t border-dashed border-slate-200">
+                            <div className="flex justify-between mb-2 text-slate-600">
                                 <span>Pokok:</span>
-                                <strong>{loanResult.principal}</strong>
+                                <strong className="text-slate-800">{loanResult.principal}</strong>
                             </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
+                            <div className="flex justify-between mb-2 text-slate-600">
                                 <span>Bunga (1%):</span>
-                                <strong>{loanResult.interest}</strong>
+                                <strong className="text-slate-800">{loanResult.interest}</strong>
                             </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', fontSize: '1.1rem', color: 'var(--primary-green)' }}>
+                            <div className="flex justify-between mt-4 text-lg text-[#2ecc71]">
                                 <strong>Total / Bulan:</strong>
                                 <strong>{loanResult.total}</strong>
                             </div>
-                            <p style={{ fontSize: '0.8rem', color: '#777', marginTop: '10px', textAlign: 'center' }}>*Simulasi estimasi, bunga flat 12% p.a.</p>
+                            <p className="text-xs text-slate-400 text-center mt-4">*Simulasi estimasi, bunga flat 12% p.a.</p>
                         </div>
                     )}
                 </div>
@@ -130,37 +139,41 @@ export default function Calculator() {
             {/* Savings View */}
             {activeTab === 'savings' && (
                 <div className="fade-in">
-                    <h3>💰 Simulasi Simpanan</h3>
-                    <div className="form-group" style={{ marginBottom: '1rem' }}>
-                        <label>Jumlah Simpanan (Rp)</label>
+                    <h3 className="text-lg font-bold text-slate-800 mb-4">💰 Simulasi Simpanan</h3>
+                    <div className="mb-4">
+                        <label className="block text-sm font-semibold text-slate-700 mb-1.5">Jumlah Simpanan (Rp)</label>
                         <input
                             type="number"
                             value={savingsAmount}
                             onChange={(e) => setSavingsAmount(e.target.value)}
                             placeholder="Contoh: 5000000"
-                            style={{ width: '100%', padding: '10px', marginTop: '5px', border: '1px solid #ddd', borderRadius: '4px' }}
+                            className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:border-[#f39c12] focus:outline-none transition-colors"
                         />
                     </div>
-                    <div className="form-group" style={{ marginBottom: '1rem' }}>
-                        <label>Lama Simpan (Bulan)</label>
+                    <div className="mb-6">
+                        <label className="block text-sm font-semibold text-slate-700 mb-1.5">Lama Simpan (Bulan)</label>
                         <select
                             value={savingsDuration}
                             onChange={(e) => setSavingsDuration(e.target.value)}
-                            style={{ width: '100%', padding: '10px', marginTop: '5px', border: '1px solid #ddd', borderRadius: '4px' }}>
+                            className="w-full px-4 py-3 border border-slate-200 rounded-lg focus:border-[#f39c12] focus:outline-none transition-colors bg-white">
                             <option value="6">6 Bulan</option>
                             <option value="12">12 Bulan</option>
                             <option value="24">24 Bulan</option>
                         </select>
                     </div>
-                    <button onClick={calculateSavings} className="btn btn-yellow" style={{ width: '100%' }}>Hitung Keuntungan</button>
+                    <button
+                        onClick={calculateSavings}
+                        className="w-full py-3.5 rounded-full bg-[#f39c12] text-white font-semibold hover:bg-[#e67e22] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
+                        Hitung Keuntungan
+                    </button>
 
                     {savingsResult && (
-                        <div className="fade-in" style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px dashed #ddd' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
+                        <div className="fade-in mt-6 pt-4 border-t border-dashed border-slate-200">
+                            <div className="flex justify-between mb-2 text-slate-600">
                                 <span>Bunga (4% p.a):</span>
-                                <strong>{savingsResult.interest}</strong>
+                                <strong className="text-slate-800">{savingsResult.interest}</strong>
                             </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px', fontSize: '1.1rem', color: 'var(--accent-orange)' }}>
+                            <div className="flex justify-between mt-4 text-lg text-[#f39c12]">
                                 <strong>Total Saldo Akhir:</strong>
                                 <strong>{savingsResult.total}</strong>
                             </div>
