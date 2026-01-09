@@ -3,106 +3,218 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
-<header class="header">
-    <div class="container navbar">
-        <a href="/" class="logo">
-            <div class="logo-icon"></div>
-            <div class="logo-text">
-                <span class="brand">[Cooperative Name]</span>
-                <span class="sub-brand">[cooperative domain].kop.id</span>
+<header
+    class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300"
+>
+    <div
+        class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center"
+    >
+        <a href="/" class="flex items-center gap-3">
+            <div
+                class="w-11 h-11 bg-gradient-to-br from-[var(--color-primary-green)] to-[var(--color-primary-blue)] rounded-xl"
+            >
+            </div>
+            <div class="flex flex-col">
+                <span
+                    class="font-extrabold text-lg text-[var(--color-text-dark)] tracking-tight"
+                    >[Cooperative Name]</span
+                >
+                <span class="text-sm text-[var(--color-text-light)]"
+                    >[cooperative domain].kop.id</span
+                >
             </div>
         </a>
 
-        <nav class="nav-menu">
-            <ul class="nav-links">
+        <nav class="hidden lg:flex items-center gap-8">
+            <ul class="flex gap-8">
                 <li>
-                    <a href="/" class={pathname === "/" ? "active" : ""}
-                        >Beranda</a
+                    <a
+                        href="/"
+                        class={`font-medium text-[0.95rem] pb-1 border-b-2 transition-colors ${pathname === "/" ? "text-[var(--color-primary-green)] border-[var(--color-primary-green)] font-bold" : "text-[var(--color-text-dark)] border-transparent hover:text-[var(--color-primary-green)]"}`}
                     >
+                        Beranda
+                    </a>
                 </li>
-                <li class="dropdown">
+                <li class="relative group">
                     <a
                         href="/about"
-                        class={pathname.startsWith("/about") ? "active" : ""}
-                        >Tentang Kami ▾</a
+                        class={`font-medium text-[0.95rem] pb-1 border-b-2 transition-colors ${pathname.startsWith("/about") ? "text-[var(--color-primary-green)] border-[var(--color-primary-green)] font-bold" : "text-[var(--color-text-dark)] border-transparent hover:text-[var(--color-primary-green)]"}`}
                     >
-                    <ul class="dropdown-content">
-                        <li><a href="/about#history">Sejarah</a></li>
-                        <li><a href="/about#vision">Visi Misi</a></li>
+                        Tentang Kami ▾
+                    </a>
+                    <ul
+                        class="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                    >
                         <li>
-                            <a href="/about#structure">Struktur Pengurus</a>
+                            <a
+                                href="/about#history"
+                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
+                                >Sejarah</a>
+                        </li>
+                        <li>
+                            <a
+                                href="/about#vision"
+                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
+                                >Visi Misi</a>
+                        </li>
+                        <li>
+                            <a
+                                href="/about#structure"
+                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
+                                >Struktur Pengurus</a>
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown">
+                <li class="relative group">
                     <a
                         href="/services"
-                        class={pathname.startsWith("/services") ? "active" : ""}
-                        >Layanan ▾</a
+                        class={`font-medium text-[0.95rem] pb-1 border-b-2 transition-colors ${pathname.startsWith("/services") ? "text-[var(--color-primary-green)] border-[var(--color-primary-green)] font-bold" : "text-[var(--color-text-dark)] border-transparent hover:text-[var(--color-primary-green)]"}`}
                     >
-                    <ul class="dropdown-content">
-                        <li><a href="/services#simpanan">Simpanan</a></li>
-                        <li><a href="/services#pinjaman">Pinjaman</a></li>
-                        <li><a href="/services#shu">Manfaat & SHU</a></li>
+                        Layanan ▾
+                    </a>
+                    <ul
+                        class="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                    >
+                        <li>
+                            <a
+                                href="/services#simpanan"
+                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
+                                >Simpanan</a>
+                        </li>
+                        <li>
+                            <a
+                                href="/services#pinjaman"
+                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
+                                >Pinjaman</a>
+                        </li>
+                        <li>
+                            <a
+                                href="/services#shu"
+                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
+                                >Manfaat & SHU</a>
+                        </li>
                     </ul>
                 </li>
                 <li>
                     <a
                         href="/membership"
-                        class={pathname.startsWith("/membership")
-                            ? "active"
-                            : ""}>Keanggotaan</a
+                        class={`font-medium text-[0.95rem] pb-1 border-b-2 transition-colors ${pathname.startsWith("/membership") ? "text-[var(--color-primary-green)] border-[var(--color-primary-green)] font-bold" : "text-[var(--color-text-dark)] border-transparent hover:text-[var(--color-primary-green)]"}`}
                     >
+                        Keanggotaan
+                    </a>
                 </li>
-                <li class="dropdown">
+                <li class="relative group">
                     <a
                         href="/transparency"
-                        class={pathname.startsWith("/transparency")
-                            ? "active"
-                            : ""}>Transparansi ▾</a
+                        class={`font-medium text-[0.95rem] pb-1 border-b-2 transition-colors ${pathname.startsWith("/transparency") ? "text-[var(--color-primary-green)] border-[var(--color-primary-green)] font-bold" : "text-[var(--color-text-dark)] border-transparent hover:text-[var(--color-primary-green)]"}`}
                     >
-                    <ul class="dropdown-content">
+                        Transparansi ▾
+                    </a>
+                    <ul
+                        class="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                    >
                         <li>
-                            <a href="/transparency#reports">Laporan Keuangan</a>
+                            <a
+                                href="/transparency#reports"
+                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
+                                >Laporan Keuangan</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a
                         href="/news"
-                        class={pathname.startsWith("/news") ? "active" : ""}
-                        >Berita</a
+                        class={`font-medium text-[0.95rem] pb-1 border-b-2 transition-colors ${pathname.startsWith("/news") ? "text-[var(--color-primary-green)] border-[var(--color-primary-green)] font-bold" : "text-[var(--color-text-dark)] border-transparent hover:text-[var(--color-primary-green)]"}`}
                     >
+                        Berita
+                    </a>
                 </li>
             </ul>
-            <a href="/contact" class="btn btn-primary nav-cta">Hubungi Kami</a>
+            <a
+                href="/contact"
+                class="px-6 py-2.5 rounded-full bg-[var(--color-primary-green)] text-white font-semibold hover:bg-[var(--color-dark-green)] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+            >
+                Hubungi Kami
+            </a>
         </nav>
 
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <!-- Hamburger -->
+        <button
+            class="hamburger lg:hidden flex flex-col gap-1.5 cursor-pointer z-50"
+            aria-label="Toggle menu"
+        >
+            <span
+                class="w-6 h-0.5 bg-[var(--color-text-dark)] rounded-sm transition-all duration-300"
+            ></span>
+            <span
+                class="w-6 h-0.5 bg-[var(--color-text-dark)] rounded-sm transition-all duration-300"
+            ></span>
+            <span
+                class="w-6 h-0.5 bg-[var(--color-text-dark)] rounded-sm transition-all duration-300"
+            ></span>
+        </button>
     </div>
 
     <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu">
-        <a href="/">Beranda</a>
-        <a href="/about">Tentang Kami</a>
-        <a href="/services">Layanan</a>
-        <a href="/membership">Keanggotaan</a>
-        <a href="/transparency">Transparansi</a>
-        <a href="/news">Berita</a>
-        <a href="/contact">Hubungi Kami</a>
+    <div
+        class="mobile-menu fixed inset-x-0 top-20 bg-white shadow-md flex flex-col gap-4 p-6 -translate-y-[150%] transition-transform duration-400 ease-out z-40 lg:hidden"
+    >
+        <a
+            href="/"
+            class="text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary-green)] py-2 transition-colors"
+            >Beranda</a
+        >
+        <a
+            href="/about"
+            class="text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary-green)] py-2 transition-colors"
+            >Tentang Kami</a
+        >
+        <a
+            href="/services"
+            class="text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary-green)] py-2 transition-colors"
+            >Layanan</a
+        >
+        <a
+            href="/membership"
+            class="text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary-green)] py-2 transition-colors"
+            >Keanggotaan</a
+        >
+        <a
+            href="/transparency"
+            class="text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary-green)] py-2 transition-colors"
+            >Transparansi</a
+        >
+        <a
+            href="/news"
+            class="text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary-green)] py-2 transition-colors"
+            >Berita</a
+        >
+        <a
+            href="/contact"
+            class="mt-2 px-6 py-3 rounded-full bg-[var(--color-primary-green)] text-white font-semibold text-center hover:bg-[var(--color-dark-green)] transition-colors"
+            >Hubungi Kami</a
+        >
     </div>
 </header>
 
 <script>
     const hamburger = document.querySelector(".hamburger");
     const mobileMenu = document.querySelector(".mobile-menu");
+    const spans = hamburger?.querySelectorAll("span");
 
     hamburger?.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        mobileMenu?.classList.toggle("active");
+        const isOpen = mobileMenu?.classList.toggle("translate-y-0");
+        mobileMenu?.classList.toggle("-translate-y-[150%]");
+
+        // Animate hamburger to X
+        if (isOpen) {
+            spans?.[0]?.classList.add("rotate-45", "translate-y-2");
+            spans?.[1]?.classList.add("opacity-0");
+            spans?.[2]?.classList.add("-rotate-45", "-translate-y-2");
+        } else {
+            spans?.[0]?.classList.remove("rotate-45", "translate-y-2");
+            spans?.[1]?.classList.remove("opacity-0");
+            spans?.[2]?.classList.remove("-rotate-45", "-translate-y-2");
+        }
     });
 </script>
