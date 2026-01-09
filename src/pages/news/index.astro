@@ -31,11 +31,11 @@ const sortedNews = allNews.sort(
             >
                 {
                     sortedNews.map((item) => (
-                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:-translate-y-2 hover:shadow-lg transition-all duration-300">
-                            <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-500 font-medium">
+                        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:-translate-y-2 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
+                            <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-500 font-medium flex-shrink-0">
                                 Foto Kegiatan
                             </div>
-                            <div class="p-6">
+                            <div class="p-6 flex flex-col flex-1">
                                 <span class="text-xs uppercase tracking-wider text-[var(--color-text-light)] mb-2 block">
                                     {new Date(
                                         item.data.date,
@@ -53,7 +53,7 @@ const sortedNews = allNews.sort(
                                 </p>
                                 <a
                                     href={`/news/${item.slug}`}
-                                    class="text-[var(--color-primary-blue)] font-medium text-sm hover:underline"
+                                    class="text-[var(--color-primary-blue)] font-medium text-sm hover:underline mt-auto"
                                 >
                                     Baca Selengkapnya →
                                 </a>
