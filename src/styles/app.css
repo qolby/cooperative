@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+/* ============================================
+   Design Tokens (TailwindCSS v4 @theme)
+   ============================================ */
+@theme {
+  /* Color Palette */
+  --color-primary-green: #2ecc71;
+  --color-dark-green: #27ae60;
+  --color-primary-blue: #3498db;
+  --color-dark-blue: #2980b9;
+  --color-accent-yellow: #f1c40f;
+  --color-accent-orange: #f39c12;
+  --color-text-dark: #2c3e50;
+  --color-text-grey: #576574;
+  --color-text-light: #95a5a6;
+  --color-bg-light: #f8f9fa;
+
+  /* Typography */
+  --font-heading: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+  /* Border Radius */
+  --radius-md: 12px;
+}
+
+/* ============================================
+   Base Styles & Resets
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-grey);
+  line-height: 1.7;
+  background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-dark);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* ============================================
+   Custom Utilities (not expressible in Tailwind)
+   ============================================ */
+
+/* Gradient backgrounds for buttons */
+.btn-gradient-green {
+  background: linear-gradient(135deg, var(--color-primary-green), var(--color-dark-green));
+}
+
+.btn-gradient-yellow {
+  background: linear-gradient(135deg, var(--color-accent-yellow), var(--color-accent-orange));
+}
+
+/* Hero overlay gradient */
+.hero-gradient-overlay {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+/* Dropdown animation */
+.dropdown-content {
+  animation: fadeIn 0.2s ease-out;
+}
