@@ -33,45 +33,67 @@ import Calculator from "../components/Calculator.jsx";
                 </div>
             </div>
             <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
                 <div
-                    class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+                    class="bg-white rounded-lg p-6 shadow-sm border border-slate-200"
                 >
                     <h3
-                        class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+                        class="text-lg font-bold text-[var(--color-text-dark)] mb-3"
                     >
                         Simpanan Saham
                     </h3>
-                    <p class="text-[var(--color-text-grey)]">
+                    <p class="text-[var(--color-text-grey)] text-sm">
                         Simpanan Pokok & Wajib sebagai bukti kepemilikan
                         anggota. Mendapatkan SHU setiap tahun.
                     </p>
                 </div>
                 <div
-                    class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+                    class="bg-white rounded-lg p-6 shadow-sm border border-slate-200"
                 >
                     <h3
-                        class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+                        class="text-lg font-bold text-[var(--color-text-dark)] mb-3"
                     >
                         Simpanan Sukarela
                     </h3>
-                    <p class="text-[var(--color-text-grey)]">
-                        Simpanan yang bisa disetor dan ditarik kapan saja dengan
-                        bunga harian.
+                    <p class="text-[var(--color-text-grey)] text-sm">
+                        Simpanan yang bisa disetor dan ditarik kapan saja.
                     </p>
                 </div>
                 <div
-                    class="bg-white rounded-xl p-8 shadow-md border border-black/[0.03] hover:-translate-y-2 hover:shadow-lg transition-all duration-300 md:col-span-2 lg:col-span-1"
+                    class="bg-white rounded-lg p-6 shadow-sm border border-slate-200"
                 >
                     <h3
-                        class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
+                        class="text-lg font-bold text-[var(--color-text-dark)] mb-3"
+                    >
+                        Simpanan Harian
+                    </h3>
+                    <p class="text-[var(--color-text-grey)] text-sm">
+                        Simpanan dengan bunga 4% per tahun, dapat ditarik sewaktu-waktu.
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-lg p-6 shadow-sm border border-slate-200"
+                >
+                    <h3
+                        class="text-lg font-bold text-[var(--color-text-dark)] mb-3"
                     >
                         Simpanan Pendidikan
                     </h3>
-                    <p class="text-[var(--color-text-grey)]">
-                        Persiapkan biaya pendidikan anak sejak dini dengan bunga
-                        khusus dan jangka waktu tertentu.
+                    <p class="text-[var(--color-text-grey)] text-sm">
+                        Persiapkan biaya pendidikan anak dengan bunga 7% per tahun.
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-lg p-6 shadow-sm border border-slate-200"
+                >
+                    <h3
+                        class="text-lg font-bold text-[var(--color-text-dark)] mb-3"
+                    >
+                        Simpanan Hari Raya
+                    </h3>
+                    <p class="text-[var(--color-text-grey)] text-sm">
+                        Simpanan khusus untuk persiapan hari raya dengan bunga 7% per tahun.
                     </p>
                 </div>
             </div>
@@ -98,47 +120,63 @@ import Calculator from "../components/Calculator.jsx";
                     >
                     </div>
                     <p class="text-[var(--color-text-grey)] mb-8">
-                        Kami menyediakan berbagai jenis pinjaman dengan proses
-                        cepat dan syarat mudah untuk kesejahteraan anggota.
+                        Berbagai jenis pinjaman untuk kebutuhan produktif dan konsumtif dengan bunga kompetitif.
                     </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3">
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
                             <span
-                                class="flex-shrink-0 w-7 h-7 bg-[var(--color-primary-green)] text-white rounded-full flex items-center justify-center text-sm"
-                                >✔</span
+                                class="flex-shrink-0 w-5 h-5 bg-[var(--color-primary-green)] text-white rounded flex items-center justify-center text-xs mt-0.5"
+                                >✓</span
                             >
-                            <span class="text-[var(--color-text-grey)]"
-                                >Pinjaman Modal Usaha</span
+                            <span class="text-[var(--color-text-grey)] text-sm"
+                                >Pinjaman Modal Usaha (Produktif)</span
                             >
                         </li>
-                        <li class="flex items-center gap-3">
+                        <li class="flex items-start gap-3">
                             <span
-                                class="flex-shrink-0 w-7 h-7 bg-[var(--color-primary-green)] text-white rounded-full flex items-center justify-center text-sm"
-                                >✔</span
+                                class="flex-shrink-0 w-5 h-5 bg-[var(--color-primary-green)] text-white rounded flex items-center justify-center text-xs mt-0.5"
+                                >✓</span
                             >
-                            <span class="text-[var(--color-text-grey)]"
+                            <span class="text-[var(--color-text-grey)] text-sm"
                                 >Pinjaman Renovasi Rumah</span
                             >
                         </li>
-                        <li class="flex items-center gap-3">
+                        <li class="flex items-start gap-3">
                             <span
-                                class="flex-shrink-0 w-7 h-7 bg-[var(--color-primary-green)] text-white rounded-full flex items-center justify-center text-sm"
-                                >✔</span
+                                class="flex-shrink-0 w-5 h-5 bg-[var(--color-primary-green)] text-white rounded flex items-center justify-center text-xs mt-0.5"
+                                >✓</span
                             >
-                            <span class="text-[var(--color-text-grey)]"
-                                >Pinjaman Kendaran Bermotor</span
+                            <span class="text-[var(--color-text-grey)] text-sm"
+                                >Pinjaman Kendaraan Bermotor</span
                             >
                         </li>
-                        <li class="flex items-center gap-3">
+                        <li class="flex items-start gap-3">
                             <span
-                                class="flex-shrink-0 w-7 h-7 bg-[var(--color-primary-green)] text-white rounded-full flex items-center justify-center text-sm"
-                                >✔</span
+                                class="flex-shrink-0 w-5 h-5 bg-[var(--color-primary-green)] text-white rounded flex items-center justify-center text-xs mt-0.5"
+                                >✓</span
                             >
-                            <span class="text-[var(--color-text-grey)]"
+                            <span class="text-[var(--color-text-grey)] text-sm"
+                                >Pinjaman Peralatan Rumah Tangga</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="flex-shrink-0 w-5 h-5 bg-[var(--color-primary-green)] text-white rounded flex items-center justify-center text-xs mt-0.5"
+                                >✓</span
+                            >
+                            <span class="text-[var(--color-text-grey)] text-sm"
                                 >Pinjaman Darurat / Kesehatan</span
                             >
                         </li>
                     </ul>
+                    <div class="mt-6 p-4 bg-slate-50 rounded-lg">
+                        <p class="text-xs text-[var(--color-text-grey)] mb-2 font-semibold">Suku Bunga:</p>
+                        <ul class="text-xs text-[var(--color-text-grey)] space-y-1">
+                            <li>• Produktif: 1.8% per bulan (21.6% per tahun)</li>
+                            <li>• Konsumtif/Kesejahteraan/Darurat: 1.9% per bulan (22.8% per tahun)</li>
+                            <li>• Flat (di atas Rp 30 juta): 1% per bulan (12% per tahun)</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Calculator Widget -->
