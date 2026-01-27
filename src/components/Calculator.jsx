@@ -63,21 +63,21 @@ export default function Calculator() {
     };
 
     return (
-        <div className="bg-white rounded-xl p-6 md:p-8 shadow-md border border-black/[0.03]">
+        <div className="bg-white rounded-lg p-6 md:p-8 shadow-sm border border-slate-200">
             {/* Tabs */}
             <div className="flex gap-3 mb-6">
                 <button
                     onClick={() => setActiveTab('loan')}
-                    className={`flex-1 py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 ${activeTab === 'loan'
-                            ? 'bg-[#2ecc71] text-white shadow-sm'
+                    className={`flex-1 py-3 px-4 rounded-lg font-semibold text-sm transition-colors ${activeTab === 'loan'
+                            ? 'bg-[#2ecc71] text-white'
                             : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                         }`}>
                     Pinjaman
                 </button>
                 <button
                     onClick={() => setActiveTab('savings')}
-                    className={`flex-1 py-3 px-4 rounded-full font-semibold text-sm transition-all duration-200 ${activeTab === 'savings'
-                            ? 'bg-[#f39c12] text-white shadow-sm'
+                    className={`flex-1 py-3 px-4 rounded-lg font-semibold text-sm transition-colors ${activeTab === 'savings'
+                            ? 'bg-[#f39c12] text-white'
                             : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                         }`}>
                     Simpanan
@@ -87,7 +87,7 @@ export default function Calculator() {
             {/* Loan View */}
             {activeTab === 'loan' && (
                 <div className="fade-in">
-                    <h3 className="text-lg font-bold text-slate-800 mb-4">🔢 Simulasi Pinjaman</h3>
+                    <h3 className="text-lg font-bold text-slate-800 mb-4">Simulasi Pinjaman</h3>
                     <div className="mb-4">
                         <label className="block text-sm font-semibold text-slate-700 mb-1.5">Jumlah Pinjaman (Rp)</label>
                         <input
@@ -112,7 +112,7 @@ export default function Calculator() {
                     </div>
                     <button
                         onClick={calculateLoan}
-                        className="w-full py-3.5 rounded-full bg-[#2ecc71] text-white font-semibold hover:bg-[#27ae60] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
+                        className="w-full py-3.5 rounded-lg bg-[#2ecc71] text-white font-semibold hover:bg-[#27ae60] transition-colors duration-200">
                         Hitung Angsuran
                     </button>
 
@@ -139,7 +139,7 @@ export default function Calculator() {
             {/* Savings View */}
             {activeTab === 'savings' && (
                 <div className="fade-in">
-                    <h3 className="text-lg font-bold text-slate-800 mb-4">💰 Simulasi Simpanan</h3>
+                    <h3 className="text-lg font-bold text-slate-800 mb-4">Simulasi Simpanan</h3>
                     <div className="mb-4">
                         <label className="block text-sm font-semibold text-slate-700 mb-1.5">Jumlah Simpanan (Rp)</label>
                         <input
@@ -163,7 +163,7 @@ export default function Calculator() {
                     </div>
                     <button
                         onClick={calculateSavings}
-                        className="w-full py-3.5 rounded-full bg-[#f39c12] text-white font-semibold hover:bg-[#e67e22] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
+                        className="w-full py-3.5 rounded-lg bg-[#f39c12] text-white font-semibold hover:bg-[#e67e22] transition-colors duration-200">
                         Hitung Keuntungan
                     </button>
 

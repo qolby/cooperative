@@ -4,23 +4,24 @@ const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <header
-    class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300"
+    class="sticky top-0 z-50 bg-white shadow-sm"
 >
     <div
         class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center"
     >
         <a href="/" class="flex items-center gap-3">
             <div
-                class="w-11 h-11 bg-gradient-to-br from-[var(--color-primary-green)] to-[var(--color-primary-blue)] rounded-xl"
+                class="w-11 h-11 bg-[var(--color-primary-green)] rounded-lg flex items-center justify-center text-white font-bold text-xl"
             >
+                CU
             </div>
             <div class="flex flex-col">
                 <span
-                    class="font-extrabold text-lg text-[var(--color-text-dark)] tracking-tight"
-                    >[Cooperative Name]</span
+                    class="font-extrabold text-base text-[var(--color-text-dark)] tracking-tight"
+                    >KSP CU Sinar Sejahtera</span
                 >
-                <span class="text-sm text-[var(--color-text-light)]"
-                    >[cooperative domain].kop.id</span
+                <span class="text-xs text-[var(--color-text-light)]"
+                    >Tarakan, Kalimantan Utara</span
                 >
             </div>
         </a>
@@ -139,7 +140,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
             </ul>
             <a
                 href="/contact"
-                class="px-6 py-2.5 rounded-full bg-[var(--color-primary-green)] text-white font-semibold hover:bg-[var(--color-dark-green)] hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+                class="px-6 py-2.5 rounded-lg bg-[var(--color-primary-green)] text-white font-semibold hover:bg-[var(--color-dark-green)] transition-colors duration-200"
             >
                 Hubungi Kami
             </a>
@@ -198,7 +199,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         >
         <a
             href="/contact"
-            class="mt-2 px-6 py-3 rounded-full bg-[var(--color-primary-green)] text-white font-semibold text-center hover:bg-[var(--color-dark-green)] transition-colors"
+            class="mt-2 px-6 py-3 rounded-lg bg-[var(--color-primary-green)] text-white font-semibold text-center hover:bg-[var(--color-dark-green)] transition-colors"
             >Hubungi Kami</a
         >
     </div>
