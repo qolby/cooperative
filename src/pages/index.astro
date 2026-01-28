@@ -1,293 +1,280 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Beranda">
-	<!-- Hero Section -->
-	<section
-		class="relative min-h-[85vh] bg-[url('https://placehold.co/1920x800/2ecc71/ffffff?text=Header+Image')] bg-cover bg-center flex items-center"
-	>
-		<div class="hero-gradient-overlay absolute inset-0"></div>
-		<div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10 fade-in-up">
-			<div class="max-w-3xl">
-				<h1
-					class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-tight mb-6"
-				>
-					<span class="text-white/95">KSP CU Sinar Sejahtera</span>
-				</h1>
-				<p
-					class="text-lg md:text-xl text-white/95 font-light mb-6"
-				>
-					SMART — Sejahtera, Mandiri, Amanah, Responsif, dan Terpercaya
-				</p>
-				<p
-					class="text-base md:text-lg text-white/90 mb-8 md:mb-10"
-				>
-					785 Anggota Aktif | Aset Rp 10 Miliar
-				</p>
-				<div class="flex flex-col sm:flex-row gap-4">
-					<a
-						href="/services"
-						class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[var(--color-primary-green)] text-white font-semibold hover:bg-[var(--color-dark-green)] transition-colors duration-200"
-					>
-						Ajukan Pinjaman
-					</a>
-					<a
-						href="/membership"
-						class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[var(--color-accent-yellow)] text-[var(--color-text-dark)] font-semibold hover:bg-[var(--color-accent-orange)] transition-colors duration-200"
-					>
-						Daftar Jadi Anggota
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- Hero Section -->
+  <section
+    class="relative min-h-[85vh] bg-[url('https://placehold.co/1920x800/2ecc71/ffffff?text=Header+Image')] bg-cover bg-center flex items-center"
+  >
+    <div class="hero-gradient-overlay absolute inset-0"></div>
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10 fade-in-up">
+      <div class="max-w-3xl">
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-tight mb-6"
+        >
+          <span class="text-white/95">KSP CU Sinar Sejahtera</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/95 font-light mb-6">
+          SMART — Sejahtera, Mandiri, Amanah, Responsif, dan Terpercaya
+        </p>
+        <p class="text-base md:text-lg text-white/90 mb-8 md:mb-10">
+          785 Anggota Aktif | Aset Rp 10 Miliar
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="/services"
+            class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[var(--color-primary-green)] text-white font-semibold hover:bg-[var(--color-dark-green)] transition-colors duration-200"
+          >
+            Ajukan Pinjaman
+          </a>
+          <a
+            href="/membership"
+            class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[var(--color-accent-yellow)] text-[var(--color-text-dark)] font-semibold hover:bg-[var(--color-accent-orange)] transition-colors duration-200"
+          >
+            Daftar Jadi Anggota
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<!-- About Brief -->
-	<section class="py-16 md:py-20 lg:py-24">
-		<div class="max-w-7xl mx-auto px-4 md:px-6">
-			<div class="text-center mb-12 md:mb-16">
-				<h2
-					class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)] mb-4"
-				>
-					Sekilas Tentang Kami
-				</h2>
-				<div
-					class="h-1 w-20 bg-[var(--color-accent-yellow)] mx-auto rounded-full"
-				>
-				</div>
-			</div>
-			<div
-				class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
-			>
-				<div
-					class="bg-white rounded-lg p-8 shadow-sm border border-slate-200"
-				>
-					<h3
-						class="text-[var(--color-primary-green)] text-xl font-bold mb-4"
-					>
-						Sejarah Singkat
-					</h3>
-					<p class="text-[var(--color-text-grey)]">
-						Didirikan pada 17 Mei 2014 dan disahkan sebagai badan hukum pada 28 Februari 2025. 
-						Berlokasi di Tarakan, Kalimantan Utara, melayani masyarakat umum dengan produk simpan pinjam.
-					</p>
-				</div>
-				<div
-					class="bg-white rounded-lg p-8 shadow-sm border border-slate-200"
-				>
-					<h3
-						class="text-[var(--color-primary-green)] text-xl font-bold mb-4"
-					>
-						Visi
-					</h3>
-					<p class="text-[var(--color-text-grey)]">
-						Menjadi Koperasi yang Sehat, Unggul, Mandiri dan Terpercaya.
-					</p>
-				</div>
-			</div>
-			<div class="text-center mt-10">
-				<a
-					href="/about"
-					class="inline-block px-8 py-3 rounded-full border-2 border-[var(--color-primary-green)] text-[var(--color-primary-green)] font-semibold hover:bg-[var(--color-primary-green)] hover:text-white transition-all duration-200"
-				>
-					Lihat Profil Lengkap
-				</a>
-			</div>
-		</div>
-	</section>
+  <!-- About Brief -->
+  <section class="py-16 md:py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-12 md:mb-16">
+        <h2
+          class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)] mb-4"
+        >
+          Sekilas Tentang Kami
+        </h2>
+        <div
+          class="h-1 w-20 bg-[var(--color-accent-yellow)] mx-auto rounded-full"
+        >
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-slate-200">
+          <h3 class="text-[var(--color-primary-green)] text-xl font-bold mb-4">
+            Sejarah Singkat
+          </h3>
+          <p class="text-[var(--color-text-grey)]">
+            Didirikan pada 17 Mei 2014 dan disahkan sebagai badan hukum pada 28
+            Februari 2015. Berlokasi di Tarakan, Kalimantan Utara, melayani
+            masyarakat umum dengan produk simpan pinjam.
+          </p>
+        </div>
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-slate-200">
+          <h3 class="text-[var(--color-primary-green)] text-xl font-bold mb-4">
+            Visi
+          </h3>
+          <p class="text-[var(--color-text-grey)]">
+            Menjadi Koperasi yang Sehat, Unggul, Mandiri dan Terpercaya.
+          </p>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a
+          href="/about"
+          class="inline-block px-8 py-3 rounded-full border-2 border-[var(--color-primary-green)] text-[var(--color-primary-green)] font-semibold hover:bg-[var(--color-primary-green)] hover:text-white transition-all duration-200"
+        >
+          Lihat Profil Lengkap
+        </a>
+      </div>
+    </div>
+  </section>
 
-	<!-- Services Preview -->
-	<section class="py-16 md:py-20 lg:py-24 bg-[var(--color-bg-light)]">
-		<div class="max-w-7xl mx-auto px-4 md:px-6">
-			<div class="text-center mb-12 md:mb-16">
-				<h2
-					class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
-				>
-					Layanan Utama
-				</h2>
-			</div>
-			<div
-				class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
-			>
-				<div
-					class="bg-white rounded-lg p-8 shadow-sm border border-slate-200 flex flex-col"
-				>
-					<h3
-						class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
-					>
-						Simpanan
-					</h3>
-					<p class="text-[var(--color-text-grey)] mb-6">
-						Simpanan Saham, Sukarela, Harian, Pendidikan, dan Hari Raya dengan bunga hingga 7% per tahun.
-					</p>
-					<a
-						href="/services#simpanan"
-						class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-medium hover:underline mt-auto"
-					>
-						Lihat Detail →
-					</a>
-				</div>
-				<div
-					class="bg-white rounded-lg p-8 shadow-sm border border-slate-200 flex flex-col"
-				>
-					<h3
-						class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
-					>
-						Pinjaman
-					</h3>
-					<p class="text-[var(--color-text-grey)] mb-6">
-						Pinjaman produktif dan konsumtif dengan bunga mulai dari 1% per bulan.
-					</p>
-					<a
-						href="/services#pinjaman"
-						class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-medium hover:underline mt-auto"
-					>
-						Lihat Simulasi →
-					</a>
-				</div>
-				<div
-					class="bg-white rounded-lg p-8 shadow-sm border border-slate-200 flex flex-col"
-				>
-					<h3
-						class="text-xl font-bold text-[var(--color-text-dark)] mb-3"
-					>
-						SHU & Manfaat
-					</h3>
-					<p class="text-[var(--color-text-grey)] mb-6">
-						Sisa hasil usaha tahunan dan solidaritas duka untuk anggota.
-					</p>
-					<a
-						href="/services#shu"
-						class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-medium hover:underline mt-auto"
-					>
-						Selengkapnya →
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- Services Preview -->
+  <section class="py-16 md:py-20 lg:py-24 bg-[var(--color-bg-light)]">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-12 md:mb-16">
+        <h2
+          class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
+        >
+          Layanan Utama
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div
+          class="bg-white rounded-lg p-8 shadow-sm border border-slate-200 flex flex-col"
+        >
+          <h3 class="text-xl font-bold text-[var(--color-text-dark)] mb-3">
+            Simpanan
+          </h3>
+          <p class="text-[var(--color-text-grey)] mb-6">
+            Simpanan Saham, Sukarela, Harian, Pendidikan, dan Hari Raya dengan
+            bunga hingga 7% per tahun.
+          </p>
+          <a
+            href="/services#simpanan"
+            class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-medium hover:underline mt-auto"
+          >
+            Lihat Detail →
+          </a>
+        </div>
+        <div
+          class="bg-white rounded-lg p-8 shadow-sm border border-slate-200 flex flex-col"
+        >
+          <h3 class="text-xl font-bold text-[var(--color-text-dark)] mb-3">
+            Pinjaman
+          </h3>
+          <p class="text-[var(--color-text-grey)] mb-6">
+            Pinjaman produktif dan konsumtif dengan bunga mulai dari 1% per
+            bulan.
+          </p>
+          <a
+            href="/services#pinjaman"
+            class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-medium hover:underline mt-auto"
+          >
+            Lihat Simulasi →
+          </a>
+        </div>
+        <div
+          class="bg-white rounded-lg p-8 shadow-sm border border-slate-200 flex flex-col"
+        >
+          <h3 class="text-xl font-bold text-[var(--color-text-dark)] mb-3">
+            SHU & Manfaat
+          </h3>
+          <p class="text-[var(--color-text-grey)] mb-6">
+            Sisa hasil usaha tahunan dan solidaritas duka untuk anggota.
+          </p>
+          <a
+            href="/services#shu"
+            class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-medium hover:underline mt-auto"
+          >
+            Selengkapnya →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<!-- Testimonials -->
-	<section class="py-16 md:py-20 lg:py-24">
-		<div class="max-w-7xl mx-auto px-4 md:px-6">
-			<div class="text-center mb-12 md:mb-16">
-				<h2
-					class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
-				>
-					Mengapa Bergabung?
-				</h2>
-			</div>
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-				<div
-					class="bg-[var(--color-bg-light)] p-8 md:p-10 border-l-4 border-[var(--color-primary-green)] rounded-lg"
-				>
-					<blockquote
-						class="text-lg md:text-xl italic text-[var(--color-text-dark)] mb-6"
-					>
-						"Sejak bergabung, usaha warung saya berkembang pesat
-						berkat pinjaman modal yang mudah. Koperasi ini
-						benar-benar membantu."
-					</blockquote>
-					<cite class="text-[var(--color-text-grey)]"
-						>— Ibu Siti, Anggota sejak 2018</cite
-					>
-				</div>
-				<div class="space-y-5">
-					<div class="flex gap-4">
-						<div class="flex-shrink-0 w-6 h-6 bg-[var(--color-primary-green)] text-white rounded flex items-center justify-center text-xs font-bold mt-0.5">✓</div>
-						<div>
-							<h4
-								class="font-bold text-[var(--color-text-dark)] mb-1"
-							>
-								Bunga Kompetitif
-							</h4>
-							<p class="text-[var(--color-text-grey)]">
-								Bunga simpanan hingga 7% per tahun dan bunga pinjaman mulai dari 1% per bulan.
-							</p>
-						</div>
-					</div>
-					<div class="flex gap-4">
-						<div class="flex-shrink-0 w-6 h-6 bg-[var(--color-primary-green)] text-white rounded flex items-center justify-center text-xs font-bold mt-0.5">✓</div>
-						<div>
-							<h4
-								class="font-bold text-[var(--color-text-dark)] mb-1"
-							>
-								Transparan & Akuntabel
-							</h4>
-							<p class="text-[var(--color-text-grey)]">
-								Pengelolaan dana terbuka dengan laporan keuangan rutin kepada anggota.
-							</p>
-						</div>
-					</div>
-					<div class="flex gap-4">
-						<div class="flex-shrink-0 w-6 h-6 bg-[var(--color-primary-green)] text-white rounded flex items-center justify-center text-xs font-bold mt-0.5">✓</div>
-						<div>
-							<h4
-								class="font-bold text-[var(--color-text-dark)] mb-1"
-							>
-								Solidaritas Anggota
-							</h4>
-							<p class="text-[var(--color-text-grey)]">
-								Program santunan duka dan manfaat kesejahteraan lainnya.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- Testimonials -->
+  <section class="py-16 md:py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-12 md:mb-16">
+        <h2
+          class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
+        >
+          Mengapa Bergabung?
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div
+          class="bg-[var(--color-bg-light)] p-8 md:p-10 border-l-4 border-[var(--color-primary-green)] rounded-lg"
+        >
+          <blockquote
+            class="text-lg md:text-xl italic text-[var(--color-text-dark)] mb-6"
+          >
+            "Sejak bergabung, usaha warung saya berkembang pesat berkat pinjaman
+            modal yang mudah. Koperasi ini benar-benar membantu."
+          </blockquote>
+          <cite class="text-[var(--color-text-grey)]"
+            >— Ibu Siti, Anggota sejak 2018</cite
+          >
+        </div>
+        <div class="space-y-5">
+          <div class="flex gap-4">
+            <div
+              class="flex-shrink-0 w-6 h-6 bg-[var(--color-primary-green)] text-white rounded flex items-center justify-center text-xs font-bold mt-0.5"
+            >
+              ✓
+            </div>
+            <div>
+              <h4 class="font-bold text-[var(--color-text-dark)] mb-1">
+                Bunga Kompetitif
+              </h4>
+              <p class="text-[var(--color-text-grey)]">
+                Bunga simpanan hingga 7% per tahun dan bunga pinjaman mulai dari
+                1% per bulan.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div
+              class="flex-shrink-0 w-6 h-6 bg-[var(--color-primary-green)] text-white rounded flex items-center justify-center text-xs font-bold mt-0.5"
+            >
+              ✓
+            </div>
+            <div>
+              <h4 class="font-bold text-[var(--color-text-dark)] mb-1">
+                Transparan & Akuntabel
+              </h4>
+              <p class="text-[var(--color-text-grey)]">
+                Pengelolaan dana terbuka dengan laporan keuangan rutin kepada
+                anggota.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div
+              class="flex-shrink-0 w-6 h-6 bg-[var(--color-primary-green)] text-white rounded flex items-center justify-center text-xs font-bold mt-0.5"
+            >
+              ✓
+            </div>
+            <div>
+              <h4 class="font-bold text-[var(--color-text-dark)] mb-1">
+                Solidaritas Anggota
+              </h4>
+              <p class="text-[var(--color-text-grey)]">
+                Program santunan duka dan manfaat kesejahteraan lainnya.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<!-- News Preview -->
-	<section class="py-16 md:py-20 lg:py-24 bg-[var(--color-bg-light)]">
-		<div class="max-w-7xl mx-auto px-4 md:px-6">
-			<div
-				class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12 md:mb-16"
-			>
-				<h2
-					class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
-				>
-					Berita Terbaru
-				</h2>
-				<a
-					href="/news"
-					class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-semibold hover:gap-2 transition-all duration-200 text-sm"
-				>
-					Lihat Semua Berita →
-				</a>
-			</div>
-			<div
-				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
-			>
-				<article
-					class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden"
-				>
-					<div
-						class="h-48 bg-slate-200 flex items-center justify-center text-slate-500 text-sm"
-					>
-						Foto Kegiatan
-					</div>
-					<div class="p-6">
-						<span
-							class="text-xs uppercase tracking-wider text-[var(--color-text-light)] mb-2 block"
-							>15 Januari 2026</span
-						>
-						<h3
-							class="text-lg font-bold text-[var(--color-text-dark)] mb-2"
-						>
-							Rapat Anggota Tahunan 2026
-						</h3>
-						<p class="text-[var(--color-text-grey)] text-sm mb-4">
-							Pelaksanaan RAT tahun buku 2025 berjalan lancar dan dihadiri oleh perwakilan anggota.
-						</p>
-						<a
-							href="/news"
-							class="text-[var(--color-primary-blue)] font-medium text-sm hover:underline"
-							>Baca Selengkapnya</a
-						>
-					</div>
-				</article>
-			</div>
-		</div>
-	</section>
+  <!-- News Preview -->
+  <section class="py-16 md:py-20 lg:py-24 bg-[var(--color-bg-light)]">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div
+        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12 md:mb-16"
+      >
+        <h2
+          class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
+        >
+          Berita Terbaru
+        </h2>
+        <a
+          href="/news"
+          class="inline-flex items-center gap-1 text-[var(--color-primary-blue)] font-semibold hover:gap-2 transition-all duration-200 text-sm"
+        >
+          Lihat Semua Berita →
+        </a>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+      >
+        <article
+          class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden"
+        >
+          <div
+            class="h-48 bg-slate-200 flex items-center justify-center text-slate-500 text-sm"
+          >
+            Foto Kegiatan
+          </div>
+          <div class="p-6">
+            <span
+              class="text-xs uppercase tracking-wider text-[var(--color-text-light)] mb-2 block"
+              >15 Januari 2026</span
+            >
+            <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-2">
+              Rapat Anggota Tahunan 2026
+            </h3>
+            <p class="text-[var(--color-text-grey)] text-sm mb-4">
+              Pelaksanaan RAT tahun buku 2025 berjalan lancar dan dihadiri oleh
+              perwakilan anggota.
+            </p>
+            <a
+              href="/news"
+              class="text-[var(--color-primary-blue)] font-medium text-sm hover:underline"
+              >Baca Selengkapnya</a
+            >
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 </Layout>

@@ -1,229 +1,277 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Tentang Kami">
-    <!-- Page Header -->
-    <div
-        class="bg-[var(--color-dark-green)] text-white py-16 md:py-24 text-center"
-    >
-        <div class="max-w-7xl mx-auto px-4 md:px-6">
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Tentang Kami
-            </h1>
-            <p class="text-lg md:text-xl text-white/90">
-                Mengenal lebih dekat KSP CU Sinar Sejahtera
-            </p>
-        </div>
+  <!-- Page Header -->
+  <div
+    class="bg-[var(--color-dark-green)] text-white py-16 md:py-24 text-center"
+  >
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        Tentang Kami
+      </h1>
+      <p class="text-lg md:text-xl text-white/90">
+        Mengenal lebih dekat KSP CU Sinar Sejahtera
+      </p>
     </div>
+  </div>
 
-    <!-- History Section -->
-    <section id="history" class="py-16 md:py-20 lg:py-24">
-        <div class="max-w-7xl mx-auto px-4 md:px-6">
-            <div class="text-center mb-12 md:mb-16">
-                <h2
-                    class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)] mb-4"
-                >
-                    Sejarah Kami
-                </h2>
-                <div
-                    class="h-1 w-20 bg-[var(--color-accent-yellow)] mx-auto rounded-full"
-                >
-                </div>
+  <!-- History Section -->
+  <section id="history" class="py-16 md:py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-12 md:mb-16">
+        <h2
+          class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)] mb-4"
+        >
+          Sejarah Kami
+        </h2>
+        <div
+          class="h-1 w-20 bg-[var(--color-accent-yellow)] mx-auto rounded-full"
+        >
+        </div>
+      </div>
+      <div
+        class="bg-white rounded-lg p-8 md:p-12 shadow-sm border border-slate-200"
+      >
+        <p class="text-[var(--color-text-grey)] leading-relaxed mb-4">
+          KSP CU Sinar Sejahtera didirikan pada tanggal 17 Mei 2014 atas
+          inisiatif sekelompok masyarakat yang peduli terhadap kesejahteraan
+          ekonomi masyarakat Tarakan dan sekitarnya.
+        </p>
+        <p class="text-[var(--color-text-grey)] leading-relaxed">
+          Pada tanggal 28 Februari 2015, kami resmi mendapatkan Badan Hukum
+          Koperasi. Sejak saat itu, kami terus bertumbuh baik dari segi jumlah
+          anggota maupun aset, dengan tetap memegang teguh prinsip-prinsip
+          koperasi dan melayani masyarakat umum.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Mission Section -->
+  <section
+    id="vision"
+    class="py-16 md:py-20 lg:py-24 bg-[var(--color-bg-light)]"
+  >
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div
+          class="bg-white rounded-lg p-8 md:p-10 shadow-sm border border-slate-200"
+        >
+          <h3 class="text-[var(--color-primary-green)] text-xl font-bold mb-4">
+            Visi
+          </h3>
+          <p class="text-[var(--color-text-grey)]">
+            Menjadi Koperasi yang Sehat, Unggul, Mandiri dan Terpercaya.
+          </p>
+        </div>
+        <div
+          class="bg-white rounded-lg p-8 md:p-10 shadow-sm border border-slate-200"
+        >
+          <h3 class="text-[var(--color-primary-green)] text-xl font-bold mb-4">
+            Misi
+          </h3>
+          <ol
+            class="list-decimal pl-5 text-[var(--color-text-grey)] space-y-2 text-sm"
+          >
+            <li>Menerapkan manajemen keuangan secara profesional</li>
+            <li>
+              Membangun SDM yang profesional melalui pendidikan dan pelatihan
+              berkelanjutan
+            </li>
+            <li>Meningkatkan pelayanan digitalisasi masa kini</li>
+            <li>
+              Menyediakan produk simpan pinjam yang inovatif dan sesuai dengan
+              kebutuhan anggota
+            </li>
+            <li>Pengelolaan koperasi yang transparan dan akuntabel</li>
+            <li>
+              Menjalin kerja sama dengan pihak-pihak luar untuk mendukung
+              kemajuan KSP CU Sinar Sejahtera
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Structure Section -->
+  <section id="structure" class="py-16 md:py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-12 md:mb-16">
+        <h2
+          class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
+        >
+          Struktur Organisasi
+        </h2>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Penasehat -->
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
+          <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">
+            Penasehat
+          </h3>
+          <p class="text-[var(--color-text-grey)]">Simon Hanga Karang, S.H.</p>
+        </div>
+
+        <!-- Pengurus -->
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
+          <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">
+            Pengurus
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">Ketua</p>
+              <p class="text-[var(--color-text-grey)] text-sm">
+                Jeni Manangnga, S.Pd.
+              </p>
             </div>
-            <div
-                class="bg-white rounded-lg p-8 md:p-12 shadow-sm border border-slate-200"
-            >
-                <p class="text-[var(--color-text-grey)] leading-relaxed mb-4">
-                    KSP CU Sinar Sejahtera didirikan pada tanggal 17 Mei 2014 
-                    atas inisiatif sekelompok masyarakat yang peduli terhadap
-                    kesejahteraan ekonomi masyarakat Tarakan dan sekitarnya.
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">
+                Wakil Ketua
+              </p>
+              <p class="text-[var(--color-text-grey)] text-sm">
+                Pery Loboran, S.IP.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">
+                Sekretaris
+              </p>
+              <p class="text-[var(--color-text-grey)] text-sm">
+                Jupri Malimo, S.Pd.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">
+                Bendahara
+              </p>
+              <p class="text-[var(--color-text-grey)] text-sm">
+                Hendrikus Berni Hardus, S.Fil.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">Anggota</p>
+              <p class="text-[var(--color-text-grey)] text-sm">
+                Paulus Eko Haryadi
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pengawas -->
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
+          <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">
+            Pengawas
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">Ketua</p>
+              <p class="text-[var(--color-text-grey)] text-sm">
+                Yulianus Bassi, S.Sos., S.Pd.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">
+                Sekretaris
+              </p>
+              <p class="text-[var(--color-text-grey)] text-sm">Kriswani Sau</p>
+            </div>
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">Anggota</p>
+              <p class="text-[var(--color-text-grey)] text-sm">
+                Agustinus Sampe, S.Pi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panitia & Karyawan -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Panitia Pendidikan -->
+          <div
+            class="bg-white rounded-lg p-6 shadow-sm border border-slate-200"
+          >
+            <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">
+              Panitia Pendidikan
+            </h3>
+            <div class="space-y-2 text-sm">
+              <div>
+                <p class="font-semibold text-[var(--color-text-dark)]">
+                  Pendamping
                 </p>
-                <p class="text-[var(--color-text-grey)] leading-relaxed">
-                    Pada tanggal 28 Februari 2025, kami resmi mendapatkan Badan Hukum
-                    Koperasi. Sejak saat itu, kami terus bertumbuh baik dari segi jumlah anggota
-                    maupun aset, dengan tetap memegang teguh prinsip-prinsip koperasi dan melayani masyarakat umum.
+                <p class="text-[var(--color-text-grey)]">Pery Loboran, S.IP</p>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--color-text-dark)]">
+                  Anggota
                 </p>
+                <p class="text-[var(--color-text-grey)]">
+                  Margareta Meman, S.Pd.
+                </p>
+                <p class="text-[var(--color-text-grey)]">Sri Delvia</p>
+              </div>
             </div>
+          </div>
+
+          <!-- Panitia Kredit -->
+          <div
+            class="bg-white rounded-lg p-6 shadow-sm border border-slate-200"
+          >
+            <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">
+              Panitia Kredit
+            </h3>
+            <div class="space-y-2 text-sm">
+              <div>
+                <p class="font-semibold text-[var(--color-text-dark)]">
+                  Pendamping
+                </p>
+                <p class="text-[var(--color-text-grey)]">Paulus Eko Haryadi</p>
+              </div>
+              <div>
+                <p class="font-semibold text-[var(--color-text-dark)]">
+                  Anggota
+                </p>
+                <p class="text-[var(--color-text-grey)]">Ganti Fredi</p>
+                <p class="text-[var(--color-text-grey)]">Meston Lubis</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Vision & Mission Section -->
-    <section
-        id="vision"
-        class="py-16 md:py-20 lg:py-24 bg-[var(--color-bg-light)]"
-    >
-        <div class="max-w-7xl mx-auto px-4 md:px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                <div
-                    class="bg-white rounded-lg p-8 md:p-10 shadow-sm border border-slate-200"
-                >
-                    <h3
-                        class="text-[var(--color-primary-green)] text-xl font-bold mb-4"
-                    >
-                        Visi
-                    </h3>
-                    <p class="text-[var(--color-text-grey)]">
-                        Menjadi Koperasi yang Sehat, Unggul, Mandiri dan Terpercaya.
-                    </p>
-                </div>
-                <div
-                    class="bg-white rounded-lg p-8 md:p-10 shadow-sm border border-slate-200"
-                >
-                    <h3
-                        class="text-[var(--color-primary-green)] text-xl font-bold mb-4"
-                    >
-                        Misi
-                    </h3>
-                    <ol
-                        class="list-decimal pl-5 text-[var(--color-text-grey)] space-y-2 text-sm"
-                    >
-                        <li>
-                            Menerapkan manajemen keuangan secara profesional
-                        </li>
-                        <li>
-                            Membangun SDM yang profesional melalui pendidikan dan pelatihan berkelanjutan
-                        </li>
-                        <li>
-                            Meningkatkan pelayanan digitalisasi masa kini
-                        </li>
-                        <li>
-                            Menyediakan produk simpan pinjam yang inovatif dan sesuai dengan kebutuhan anggota
-                        </li>
-                        <li>
-                            Pengelolaan koperasi yang transparan dan akuntabel
-                        </li>
-                        <li>
-                            Menjalin kerja sama dengan pihak-pihak luar untuk mendukung kemajuan KSP CU Sinar Sejahtera
-                        </li>
-                    </ol>
-                </div>
+        <!-- Karyawan -->
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
+          <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">
+            Karyawan
+          </h3>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm"
+          >
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">Kasir</p>
+              <p class="text-[var(--color-text-grey)]">Jana Keristiani</p>
             </div>
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">Kasir</p>
+              <p class="text-[var(--color-text-grey)]">
+                Kevin Fernandianto Lubis, S.Kom.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">Kasir</p>
+              <p class="text-[var(--color-text-grey)]">Fidelsia Gaspatama</p>
+            </div>
+            <div>
+              <p class="font-semibold text-[var(--color-text-dark)]">
+                Penjaga Malam
+              </p>
+              <p class="text-[var(--color-text-grey)]">Rafael Lusi Lengari</p>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Structure Section -->
-    <section id="structure" class="py-16 md:py-20 lg:py-24">
-        <div class="max-w-7xl mx-auto px-4 md:px-6">
-            <div class="text-center mb-12 md:mb-16">
-                <h2
-                    class="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--color-text-dark)]"
-                >
-                    Struktur Organisasi
-                </h2>
-            </div>
-            
-            <div class="space-y-8">
-                <!-- Penasehat -->
-                <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
-                    <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">Penasehat</h3>
-                    <p class="text-[var(--color-text-grey)]">Simon Hanga Karang, S.H.</p>
-                </div>
-
-                <!-- Pengurus -->
-                <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
-                    <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">Pengurus</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Ketua</p>
-                            <p class="text-[var(--color-text-grey)] text-sm">Jeni Manangnga, S.Pd.</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Wakil Ketua</p>
-                            <p class="text-[var(--color-text-grey)] text-sm">Pery Loboran, S.IP.</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Sekretaris</p>
-                            <p class="text-[var(--color-text-grey)] text-sm">Jupri Malimo, S.Pd.</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Bendahara</p>
-                            <p class="text-[var(--color-text-grey)] text-sm">Hendrikus Berni Hardus, S.Fil.</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Anggota</p>
-                            <p class="text-[var(--color-text-grey)] text-sm">Paulus Eko Haryadi</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pengawas -->
-                <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
-                    <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">Pengawas</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Ketua</p>
-                            <p class="text-[var(--color-text-grey)] text-sm">Yulianus Bassi, S.Sos., S.Pd.</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Sekretaris</p>
-                            <p class="text-[var(--color-text-grey)] text-sm">Kriswani Sau</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Anggota</p>
-                            <p class="text-[var(--color-text-grey)] text-sm">Agustinus Sampe, S.Pi.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Panitia & Karyawan -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Panitia Pendidikan -->
-                    <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
-                        <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">Panitia Pendidikan</h3>
-                        <div class="space-y-2 text-sm">
-                            <div>
-                                <p class="font-semibold text-[var(--color-text-dark)]">Pendamping</p>
-                                <p class="text-[var(--color-text-grey)]">Pery Loboran, S.IP</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-[var(--color-text-dark)]">Anggota</p>
-                                <p class="text-[var(--color-text-grey)]">Margareta Meman, S.Pd.</p>
-                                <p class="text-[var(--color-text-grey)]">Sri Delvia</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Panitia Kredit -->
-                    <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
-                        <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">Panitia Kredit</h3>
-                        <div class="space-y-2 text-sm">
-                            <div>
-                                <p class="font-semibold text-[var(--color-text-dark)]">Pendamping</p>
-                                <p class="text-[var(--color-text-grey)]">Paulus Eko Haryadi</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-[var(--color-text-dark)]">Anggota</p>
-                                <p class="text-[var(--color-text-grey)]">Ganti Fredi</p>
-                                <p class="text-[var(--color-text-grey)]">Meston Lubis</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Karyawan -->
-                <div class="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
-                    <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-4">Karyawan</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Kasir</p>
-                            <p class="text-[var(--color-text-grey)]">Jana Keristiani</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Kasir</p>
-                            <p class="text-[var(--color-text-grey)]">Kevin Fernandianto Lubis, S.Kom.</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Kasir</p>
-                            <p class="text-[var(--color-text-grey)]">Fidelsia Gaspatama</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-[var(--color-text-dark)]">Penjaga Malam</p>
-                            <p class="text-[var(--color-text-grey)]">Rafael Lusi Lengari</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </Layout>
