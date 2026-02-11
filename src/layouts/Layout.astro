@@ -26,6 +26,8 @@ const { title } = Astro.props;
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        ></script>
     </head>
     <body>
         <Header />
@@ -53,5 +55,18 @@ const { title } = Astro.props;
                 >
             </a>
         </div>
+
+        <script is:inline>
+            // Redirect to admin after login
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", (user) => {
+                    if (!user) {
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "/admin/";
+                        });
+                    }
+                });
+            }
+        </script>
     </body>
 </html>

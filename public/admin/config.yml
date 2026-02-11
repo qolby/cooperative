@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: qolby/cooperative
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+# Publish mode - use editorial workflow for draft/review/publish states
+publish_mode: editorial_workflow
+
+# Media files configuration
+media_folder: "public/news"
+public_folder: "/news"
+
+# Collections configuration
+collections:
+  - name: "news"
+    label: "Berita & Kegiatan"
+    folder: "src/content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { 
+          label: "Tanggal", 
+          name: "date", 
+          widget: "datetime",
+          date_format: "YYYY-MM-DD",
+          time_format: false,
+          format: "YYYY-MM-DD"
+        }
+      - { 
+          label: "Ringkasan", 
+          name: "summary", 
+          widget: "text",
+          hint: "Ringkasan singkat yang ditampilkan di halaman daftar berita"
+        }
+      - { 
+          label: "Gambar", 
+          name: "image", 
+          widget: "image",
+          required: false,
+          hint: "Gambar utama berita (opsional)",
+          media_folder: "/public/news"
+        }
+      - { 
+          label: "Konten", 
+          name: "body", 
+          widget: "markdown",
+          hint: "Konten lengkap berita dalam format Markdown"
+        }
