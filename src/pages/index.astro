@@ -1,5 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const allNews = await getCollection("news");
+const sortedNews = allNews.sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+);
+const latestNews = sortedNews.slice(0, 3);
 ---
 
 <Layout title="Beranda">
@@ -24,13 +31,13 @@ import Layout from '../layouts/Layout.astro';
         <div class="flex flex-col sm:flex-row gap-4">
           <a
             href="/services"
-            class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[var(--color-primary-green)] text-white font-semibold hover:bg-[var(--color-dark-green)] transition-colors duration-200"
+            class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[var(--color-primary-green)] text-white font-semibold hover:bg-[var(--color-dark-green)] transition-colors duration-200"
           >
             Ajukan Pinjaman
           </a>
           <a
             href="/membership"
-            class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-[var(--color-accent-yellow)] text-[var(--color-text-dark)] font-semibold hover:bg-[var(--color-accent-orange)] transition-colors duration-200"
+            class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[var(--color-accent-yellow)] text-[var(--color-text-dark)] font-semibold hover:bg-[var(--color-accent-orange)] transition-colors duration-200"
           >
             Daftar Jadi Anggota
           </a>
@@ -59,9 +66,13 @@ import Layout from '../layouts/Layout.astro';
             Sejarah Singkat
           </h3>
           <p class="text-[var(--color-text-grey)]">
-            Didirikan pada 17 Mei 2014 dan disahkan sebagai badan hukum pada 28
-            Februari 2015. Berlokasi di Tarakan, Kalimantan Utara, melayani
-            masyarakat umum dengan produk simpan pinjam.
+            Koperasi Simpan Pinjam Credit Union Sinar Sejahtera atau KSP CU
+            Sinar Sejahtera dibentuk tanggal 17 Mei 2014 di kediaman Bpk.
+            Yulianus Bassi, S.Sos, beralamat di Jalan Juata Harapan No. 04 RT.
+            10 Kelurahan Karang Harapan, Kecamatan Tarakan Barat, Kota Tarakan
+            yang dihadiri 23 orang yang selanjutnya disebut sebagai pendiri.
+            Sejak tanggal 28 Februari 2015, KSP CU Sinar Sejahtera telah resmi
+            berbadan hukum dengan nomor 130-SK.02/BH/XXXIV.2/2015.
           </p>
         </div>
         <div class="bg-white rounded-lg p-8 shadow-sm border border-slate-200">
@@ -247,33 +258,44 @@ import Layout from '../layouts/Layout.astro';
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
       >
-        <article
-          class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden"
-        >
-          <div
-            class="h-48 bg-slate-200 flex items-center justify-center text-slate-500 text-sm"
-          >
-            Foto Kegiatan
-          </div>
-          <div class="p-6">
-            <span
-              class="text-xs uppercase tracking-wider text-[var(--color-text-light)] mb-2 block"
-              >15 Januari 2026</span
-            >
-            <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-2">
-              Rapat Anggota Tahunan 2026
-            </h3>
-            <p class="text-[var(--color-text-grey)] text-sm mb-4">
-              Pelaksanaan RAT tahun buku 2025 berjalan lancar dan dihadiri oleh
-              perwakilan anggota.
-            </p>
-            <a
-              href="/news"
-              class="text-[var(--color-primary-blue)] font-medium text-sm hover:underline"
-              >Baca Selengkapnya</a
-            >
-          </div>
-        </article>
+        {
+          latestNews.map((item) => (
+            <article class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+              {item.data.image ? (
+                <img
+                  src={`/news/${item.data.image}`}
+                  alt={item.data.title}
+                  class="h-48 w-full object-cover"
+                />
+              ) : (
+                <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-500 text-sm">
+                  Foto Kegiatan
+                </div>
+              )}
+              <div class="p-6">
+                <span class="text-xs uppercase tracking-wider text-[var(--color-text-light)] mb-2 block">
+                  {new Date(item.data.date).toLocaleDateString("id-ID", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
+                <h3 class="text-lg font-bold text-[var(--color-text-dark)] mb-2">
+                  {item.data.title}
+                </h3>
+                <p class="text-[var(--color-text-grey)] text-sm mb-4">
+                  {item.data.summary}
+                </p>
+                <a
+                  href={`/news/${item.slug}`}
+                  class="text-[var(--color-primary-blue)] font-medium text-sm hover:underline"
+                >
+                  Baca Selengkapnya →
+                </a>
+              </div>
+            </article>
+          ))
+        }
       </div>
     </div>
   </section>

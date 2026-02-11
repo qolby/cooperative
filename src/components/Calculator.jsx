@@ -68,17 +68,17 @@ export default function Calculator() {
             <div className="flex gap-3 mb-6">
                 <button
                     onClick={() => setActiveTab('loan')}
-                    className={`flex-1 py-3 px-4 rounded-lg font-semibold text-sm transition-colors ${activeTab === 'loan'
-                            ? 'bg-[#2ecc71] text-white'
-                            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    className={`flex-1 py-3 px-4 rounded-full font-semibold text-sm transition-colors ${activeTab === 'loan'
+                        ? 'bg-[#2ecc71] text-white'
+                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                         }`}>
                     Pinjaman
                 </button>
                 <button
                     onClick={() => setActiveTab('savings')}
-                    className={`flex-1 py-3 px-4 rounded-lg font-semibold text-sm transition-colors ${activeTab === 'savings'
-                            ? 'bg-[#f39c12] text-white'
-                            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    className={`flex-1 py-3 px-4 rounded-full font-semibold text-sm transition-colors ${activeTab === 'savings'
+                        ? 'bg-[#f39c12] text-white'
+                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                         }`}>
                     Simpanan
                 </button>
@@ -112,7 +112,7 @@ export default function Calculator() {
                     </div>
                     <button
                         onClick={calculateLoan}
-                        className="w-full py-3.5 rounded-lg bg-[#2ecc71] text-white font-semibold hover:bg-[#27ae60] transition-colors duration-200">
+                        className="w-full py-3.5 rounded-full bg-[#2ecc71] text-white font-semibold hover:bg-[#27ae60] transition-colors duration-200">
                         Hitung Angsuran
                     </button>
 
@@ -163,7 +163,7 @@ export default function Calculator() {
                     </div>
                     <button
                         onClick={calculateSavings}
-                        className="w-full py-3.5 rounded-lg bg-[#f39c12] text-white font-semibold hover:bg-[#e67e22] transition-colors duration-200">
+                        className="w-full py-3.5 rounded-full bg-[#f39c12] text-white font-semibold hover:bg-[#e67e22] transition-colors duration-200">
                         Hitung Keuntungan
                     </button>
 

@@ -3,9 +3,7 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
-<header
-    class="sticky top-0 z-50 bg-white shadow-sm"
->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
     <div
         class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center"
     >
@@ -36,71 +34,21 @@ const currentPath = pathname.slice(1); // remove the first "/"
                         Beranda
                     </a>
                 </li>
-                <li class="relative group">
+                <li>
                     <a
                         href="/about"
                         class={`font-medium text-[0.95rem] pb-1 border-b-2 transition-colors ${pathname.startsWith("/about") ? "text-[var(--color-primary-green)] border-[var(--color-primary-green)] font-bold" : "text-[var(--color-text-dark)] border-transparent hover:text-[var(--color-primary-green)]"}`}
                     >
-                        Tentang Kami ▾
+                        Tentang Kami
                     </a>
-                    <ul
-                        class="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                    >
-                        <li>
-                            <a
-                                href="/about#history"
-                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
-                                >Sejarah</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="/about#vision"
-                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
-                                >Visi Misi</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="/about#structure"
-                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
-                                >Struktur Pengurus</a
-                            >
-                        </li>
-                    </ul>
                 </li>
-                <li class="relative group">
+                <li>
                     <a
                         href="/services"
                         class={`font-medium text-[0.95rem] pb-1 border-b-2 transition-colors ${pathname.startsWith("/services") ? "text-[var(--color-primary-green)] border-[var(--color-primary-green)] font-bold" : "text-[var(--color-text-dark)] border-transparent hover:text-[var(--color-primary-green)]"}`}
                     >
-                        Layanan ▾
+                        Layanan
                     </a>
-                    <ul
-                        class="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                    >
-                        <li>
-                            <a
-                                href="/services#simpanan"
-                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
-                                >Simpanan</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="/services#pinjaman"
-                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
-                                >Pinjaman</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="/services#shu"
-                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
-                                >Manfaat & SHU</a
-                            >
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <a
@@ -110,24 +58,13 @@ const currentPath = pathname.slice(1); // remove the first "/"
                         Keanggotaan
                     </a>
                 </li>
-                <li class="relative group">
+                <li>
                     <a
                         href="/transparency"
                         class={`font-medium text-[0.95rem] pb-1 border-b-2 transition-colors ${pathname.startsWith("/transparency") ? "text-[var(--color-primary-green)] border-[var(--color-primary-green)] font-bold" : "text-[var(--color-text-dark)] border-transparent hover:text-[var(--color-primary-green)]"}`}
                     >
-                        Transparansi ▾
+                        Transparansi
                     </a>
-                    <ul
-                        class="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-lg py-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                    >
-                        <li>
-                            <a
-                                href="/transparency#reports"
-                                class="block px-5 py-2.5 text-sm text-[var(--color-text-grey)] hover:bg-[var(--color-bg-light)] hover:text-[var(--color-primary-green)]"
-                                >Laporan Keuangan</a
-                            >
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <a
@@ -140,7 +77,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
             </ul>
             <a
                 href="/contact"
-                class="px-6 py-2.5 rounded-lg bg-[var(--color-primary-green)] text-white font-semibold hover:bg-[var(--color-dark-green)] transition-colors duration-200"
+                class="px-6 py-2.5 rounded-full bg-[var(--color-primary-green)] text-white font-semibold hover:bg-[var(--color-dark-green)] transition-colors duration-200"
             >
                 Hubungi Kami
             </a>
@@ -199,7 +136,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
         >
         <a
             href="/contact"
-            class="mt-2 px-6 py-3 rounded-lg bg-[var(--color-primary-green)] text-white font-semibold text-center hover:bg-[var(--color-dark-green)] transition-colors"
+            class="mt-2 px-6 py-3 rounded-full bg-[var(--color-primary-green)] text-white font-semibold text-center hover:bg-[var(--color-dark-green)] transition-colors"
             >Hubungi Kami</a
         >
     </div>

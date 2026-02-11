@@ -32,9 +32,17 @@ const sortedNews = allNews.sort(
                 {
                     sortedNews.map((item) => (
                         <article class="bg-white rounded-xl shadow-md overflow-hidden hover:-translate-y-2 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
-                            <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-500 font-medium flex-shrink-0">
-                                Foto Kegiatan
-                            </div>
+                            {item.data.image ? (
+                                <img
+                                    src={`/news/${item.data.image}`}
+                                    alt={item.data.title}
+                                    class="h-48 w-full object-cover flex-shrink-0"
+                                />
+                            ) : (
+                                <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-500 font-medium flex-shrink-0">
+                                    Foto Kegiatan
+                                </div>
+                            )}
                             <div class="p-6 flex flex-col flex-1">
                                 <span class="text-xs uppercase tracking-wider text-[var(--color-text-light)] mb-2 block">
                                     {new Date(
